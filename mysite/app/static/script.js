@@ -11,7 +11,6 @@ function getNumOthers() {
 }
 
 $(function() {
-
     // Create avatars for each other person
     var numOthers = getNumOthers();
     for (var i = 0; i < numOthers; i++) {
@@ -19,3 +18,6 @@ $(function() {
     }
 
 });
+
+
+// Do we create an object? or do we create a javascript variable?
