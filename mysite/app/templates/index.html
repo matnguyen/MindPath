@@ -22,20 +22,53 @@
             <input type="submit" value="Google Search" />
         </form>
 
+        <!--Sign in and registration-->
+        {% if not request.user.is_authenticated %}
+            <form method="POST" action="authenticate_user" id="login">{% csrf_token %}
+                <input type="text" name="username" value="Username"/>
+                <input type="text" name="password" value="Password"/>
+                <input type="submit" value="Login"/>
+            </form>
+
+            <form method="POST" action="register_user" id="registration">{% csrf_token %}
+                <input type="text" name="username" value="Username"/>
+                <input type="text" name="email" value="Email"/>
+                <input type="text" name="password" value="Password"/>
+                <input type="text" name="password_confirm" value="Confirm your password"/>
+                <input type="submit" value="Register"/>
+            </form>
+        {% endif %}
+
+        <!--Trigger messages (either error or succesful registration)-->
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <h2{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</h2>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+        <!--Logout button-->
+        {% if request.user.is_authenticated %}
+            <a href="logout_user">LOGOUT</a>
+        {% endif %}
+
         <!-- buildings -->
-        <a href="clinics.html">
+        <a href="clinics">
             <div id="clinic">
               <h2 class="building">Clinics</h2>
             </div>
         </a>
 
-        <a href="apps.html">
+        <a href="apps">
             <div id="apps">
-                <h2 class="building">Apps</h2>
+                <h2 class="building">Apps
+                    <img src="{% static 'Assets/apps.svg' %}" alt="Apps">
+                </h2>
             </div>
         </a>
 
-        <a href="clinics.html">
+        <a href="clinics">
             <div id="call-centres">
                 <h2 class="building">Call Centres <br/>
                     <img src="{% static 'Assets/callcentre.svg' %}" alt="Call Centre">
@@ -43,13 +76,13 @@
             </div>
         </a>
 
-        <a href="about.html">
+        <a href="about">
             <div id="about">
                 <h2 class="building">About</h2>
             </div>
         </a>
 
-        <a href="settings.html">
+        <a href="settings">
             <div id="settings">
                 <h2 class="building">Settings
                     <img src="{% static 'Assets/settings.svg' %}" alt="Settings">
