@@ -20,12 +20,13 @@ function getRandomInt(min, max) {
 // Generates a <div> DOM object that represents an avatar_other.
 function createAvatarOther() {
     var obj = $("<div class='avatar-other'></div>");
-
+    var avatar = $("<img src='static/Assets/blueppl.svg'>");
     obj.css("position", "absolute");
     obj.css("left", getRandomInt(xMin, xMax));
     obj.css("top", getRandomInt(yMin, yMax));
 
     $('#avatar-others').append(obj);
+    obj.append(avatar);
 }
 
 function getNumOthers() {
