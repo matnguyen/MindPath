@@ -6,6 +6,12 @@ const xMax = 800;
 const yMin = 100;
 const yMax = 600;
 
+// lower and upper limit for changing speed of other avatars
+const dxMin = -10;
+const dxMax = 10;
+const dyMin = -10;
+const dyMax = 10;
+
 // Get a random number between min and max, inclusive.
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -69,6 +75,26 @@ function gameLoop() {
     // moveSelection();
     // setTimeout("gameLoop()", 10);
     window.addEventListener('keydown', moveSelection);
+    setInterval(updateOtherAvatars, 100);
+}
+
+function updateOtherAvatars() {
+    // get all the avatars
+    var others = $(".avatar-other").toArray();
+    others.forEach(function(other) {
+
+        const xChange = getRandomInt(dxMin, dxMax);
+        const yChange = getRandomInt(dyMin, dyMax);
+
+        other.style.left = parseInt(other.style.left) + xChange + 'px';
+        other.style.top = parseInt(other.style.top) + yChange + 'px';
+        // var left = other.css('left');
+        // var top = other.css('top');
+        //
+        // other.css('left', left+5);
+        // other.css('top', top+5);
+    });
+    // console.log(others);
 }
 
 $(function() {
