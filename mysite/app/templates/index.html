@@ -12,7 +12,13 @@
 
 <body onload="gameLoop()" onkeydown="" onkeyup="">
     <div id ="wrapper">
+<<<<<<< HEAD
+
+        <h1><img src="{% static 'Assets/Title.png' %}" alt="Mind Path" id="logo"></h1>
+        <p id="logo-caption">Exploring your mental health.</p>
+=======
         <h1><img src="{% static 'assets/Title.png' %}" alt="Mind Path" id="logo"></h1>
+>>>>>>> 7908c336712fc76d7ccc378aec62c0ed7ea38b7a
 
         <!-- google search bar -->
         <form method="POST" action="search" id="google-search">{% csrf_token %}
@@ -30,16 +36,22 @@
         <div id="call-centers">
             <h2 class="building">Call Centers</h2>
         </div>
-        <div id="apps">
-            <h2 class="building">Apps</h2>
+        <div id="about">
+            <h2 class="building">About</h2>
         </div>
-        <div id="call-centers">
-            <h2 class="building">Call Centres</h2>
+        <div id="settings">
+            <h2 class="building">Setting</h2>
         </div>
 
         <!-- avatars -->
+<<<<<<< HEAD
+        <div id="avatar-self">
+
+=======
         <div id="avatar-self" style="left: 100px; top: 100px;">
+>>>>>>> 7908c336712fc76d7ccc378aec62c0ed7ea38b7a
         </div>
+
         <div id="avatar-others">
         </div>
     </div> <!--end of wrapper -->

@@ -2,7 +2,7 @@
 beige: #EEE1CC
 dark blue: #234C6C
 lt blue: #84CBDD
-med blue: #398DA7
+med blue: #5D8AA8
  */
 
 body {
@@ -15,6 +15,13 @@ body {
     width: 8rem;
     margin: 0 auto;
     display: block;;
+}
+
+#logo-caption {
+    text-align: center;
+    color: #5D8AA8;
+    font-variant-caps: all-small-caps;
+    margin-top: -20px;
 }
 
 #wrapper {
@@ -32,7 +39,7 @@ body {
     border: none;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
     transition: box-shadow 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
-    width: 30%;
+    width: 35%;
     max-width: 584px;
 }
 
@@ -48,6 +55,8 @@ body {
     padding:10px;
     border-radius: 2px;
     height: 8%;
+    min-height: 40px;
+    max-height: 50px;
 }
 
 #clinic, #apps, #call-centers {
@@ -75,10 +84,31 @@ body {
     bottom: 25%;
 }
 
+#settings, #about {
+    position: absolute;
+    background: #fff;
+    width: 20%;
+    height: 20%;
+}
+
+#settings {
+    bottom: 0px;
+    left: 10%;
+}
+
+#about {
+    bottom: 0px;
+    right: 20%;
+}
+
 #avatar-self {
+    height: 10px;
+    width: 10px;
+    background: url("Assets/grayppl.svg") no-repeat;
+    background-size: 100px 82px;
+    background-color: #ccc;
     height: 15px;
     width: 15px;
-    background-color: gold;
     border-radius: 50%;
     position: absolute;
 }
