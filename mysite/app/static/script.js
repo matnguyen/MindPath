@@ -50,34 +50,14 @@ keys.DOWN = 40;
 
 // Checks what key is being pressed.
 function moveSelection(e) {
-    console.log(e);
-        if (e.preventDefault) {
-            e.preventDefault();
-        }
-        else {
-            e.returnValue = false;
-        }
-        var kc = e.keyCode || e.which;
-        keys[kc] = e.type == 'keydown';
-
-
-    // var kc = e.keyCode || e.which;
-    // keys[kc] = e.type == 'keydown';
-
-    // e = e || window.event;
-    // if (e.keyCode == 37) {
-    //     updateLeft();
-    // }
-    // else if (e.keyCode == 39) {
-    //     moveRight();
-    // }
-    // if (e.keyCode == 38) {
-    //     moveUp();
-    // }
-    // else if (e.keyCode == 40) {
-    //     moveDown();
-    // }
-    // move();
+    if (e.preventDefault) {
+        e.preventDefault();
+    }
+    else {
+        e.returnValue = false;
+    }
+    var kc = e.keyCode || e.which;
+    keys[kc] = e.type == 'keydown';
 }
 
 function moveLeft() {
@@ -115,17 +95,7 @@ var detectCharacterMovement = function(){
     }
 };
 
-
-
-
 function gameLoop() {
-
-    // change position based on speed
-    // moveSelection();
-    // setTimeout("gameLoop()", 10);
-
-
-
     setInterval(function() {detectCharacterMovement();}, 30);
     setInterval(updateOtherAvatars, 100);
 }
@@ -146,12 +116,11 @@ function updateOtherAvatars() {
         // other.css('left', left+5);
         // other.css('top', top+5);
     });
-    // console.log(others);
 }
 
 
 $(function() {
-        document.body.onkeyup =
+    document.body.onkeyup =
     document.body.onkeydown = function(e){
         if (e.preventDefault) {
             e.preventDefault();
@@ -159,11 +128,9 @@ $(function() {
         else {
             e.returnValue = false;
         }
-        console.log("b");
         var kc = e.keyCode || e.which;
         keys[kc] = e.type == 'keydown';
     };
-
 
     // Create avatars for each other person
     var numOthers = getNumOthers();
