@@ -10,13 +10,13 @@
     <script src="{% static 'script.js' %}"></script>
 </head>
 
-<body>
+<body onload="gameLoop()" onkeydown="" onkeyup="">
 <!--     <form method="POST" action="search">{% csrf_token %}
         text: <input type="text" name="handle" value=""<br>
         <input type="submit" value="submit">
     </form> -->
     <div id ="wrapper">
-        <h1><img src="{% static 'Assets/Title.png' %}" alt="Mind Path" id="logo"></h1>
+        <h1><img src="{% static 'assets/Title.png' %}" alt="Mind Path" id="logo"></h1>
         <div id="clinic">
             <h2 class="building">Clinics</h2>
         </div>
@@ -32,7 +32,7 @@
         <div id="call-centers">
             <h2 class="building">Call Centres</h2>
         </div>
-        <div id="avatar-self">
+        <div id="avatar-self" style="left: 100px; top: 100px;">
         </div>
         <div id="avatar-others">
         </div>
