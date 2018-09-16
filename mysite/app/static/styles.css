@@ -5,12 +5,16 @@ lt blue: #84CBDD
 med blue: #5D8AA8
  */
 
-<<<<<<< HEAD
 /*body, html {height:100%;}*/
 /*body {overflow: hidden; }*/
 
 .modal {
     display: initial;
+}
+
+.fade {
+    /*opacity: 0.2!important;*/
+    display: none;
 }
 
 body {
@@ -22,6 +26,12 @@ body {
 h2 {
     font-size: 12px;
     font-weight: initial;
+}
+
+#logout {
+    position: absolute;
+    top: 5px;
+    right: 5px;
 }
 
 #logo {

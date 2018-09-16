@@ -16,7 +16,7 @@
 </head>
 
 <body onload="gameLoop()" onkeydown="" onkeyup="">
-    <!--<div class="modal" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">-->
+    <div class="modal" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 
         <h1><img src="{% static 'Assets/Title.png' %}" alt="Mind Path" id="logo"></h1>
         <p id="logo-caption">Exploring your mental health.</p>
@@ -29,9 +29,9 @@
 
         <!--Sign in and registration-->
         {% if not request.user.is_authenticated %}
-    	  <!--<div class="modal-dialog  modal-dialog-centered">-->
-				<!--<div class="modal-content loginmodal-container">-->
-                    <!--<form method="POST" action="authenticate_user" id="login">{% csrf_token %}-->
+    	  <div class="modal-dialog  modal-dialog-centered">
+				<div class="modal-content loginmodal-container">
+                    <form method="POST" action="authenticate_user" id="login">{% csrf_token %}
                         <input type="text" name="username" value=""  placeholder="Username"/> <br>
                         <input type="password" name="password" value=""  placeholder="Password"/>
                         <input type="submit" value="Login"/>
@@ -44,8 +44,9 @@
                         <input type="text" name="password_confirm"  placeholder="Password" value=""/>
                         <input type="submit" value="Register"/>
                     </form>
-                <!--</div>-->
-          <!--</div>-->
+                </div>
+          </div>
+        <div class="fade">
         {% endif %}
 
         <!--Trigger messages (either error or succesful registration)-->
@@ -59,9 +60,16 @@
 
         <!--Logout button-->
         {% if request.user.is_authenticated %}
-            <a href="logout_user">LOGOUT</a>
+            <a href="logout_user" id="logout"><button class="btn">LOG OUT</button></a>
         {% endif %}
 
+        <div id ="wrapper">
+        <!-- buildings -->
+        <a href="clinics">
+            <div id="clinic">
+              <h2 class="building">Clinics
+                  <img src="{% static 'Assets/clinic.svg' %}" alt="Clinic">
+              </h2>
         <div id="canvas">
             <!-- buildings -->
 
@@ -114,6 +122,8 @@
 
             </div>
         </div>
+    </div>
+
     </div> <!--end of wrapper -->
 </body>
 </html>
