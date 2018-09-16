@@ -29,19 +29,37 @@
         <a href="../" id="back"><img src="{% static 'Assets/arrow.png' %}" alt="Back button"></a>
         <!-- avatars -->
         <div id="avatar-self" style="left: 0; top: 0">
-            <img src="{% static 'Assets/grayppl.svg' %}">
+            {% if color == "gray" %}
+                <img src="{% static 'Assets/grayppl.svg' %}">
+            {% endif %}
+            {% if color == "orange" %}
+                <img src="{% static 'Assets/orangeppl.svg' %}">
+            {% endif %}
+            {% if color == "blue" %}
+                <img src="{% static 'Assets/blueppl.svg' %}">
+            {% endif %}
+            {% if color == "green" %}
+                <img src="{% static 'Assets/greenppl.svg' %}">
+            {% endif %}
+            {% if color == "yellow" %}
+                <img src="{% static 'Assets/yellowppl.svg' %}">
+            {% endif %}
+            {% if color == "purple" %}
+                <img src="{% static 'Assets/purpleppl.svg' %}">
+            {% endif %}
         </div>
 
-       <form>
+       <form method="POST" action="change_color" id="change_color">{% csrf_token %}
            <h3>Choose a color:</h3>
            <select name="color">
-               <option value="red">Red</option>
+               <option value="orange">Orange</option>
                <option value="blue">Blue</option>
                <option value="green">Green</option>
                <option value="yellow">Yellow</option>
                <option value="purple">Purple</option>
+               <option value="gray">Gray</option>
            </select>
-           <input type="submit">
+           <input type="submit" value="Submit">
        </form>
 
 

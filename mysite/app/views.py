@@ -2,13 +2,19 @@ from django.contrib import messages
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
-from .models import Resources
+from .models import Resources, UserColor
 import json
+
 
 
 # Create your views here.
 def index(request):
-    return render(request, 'index.html')
+    if request.user.is_authenticated:
+        user = UserColor.objects.get(user=request.user.username)
+        color = user.color
+        return render(request, 'index.html', {'color': color})
+    else:
+        return render(request, 'index.html')
 
 
 def authenticate_user(request):
@@ -37,6 +43,8 @@ def register_user(request):
         messages.add_message(request, messages.INFO, "Succesfully registered!")
         user = User.objects.create_user(username, email, password)
         user.save()
+        user_color = UserColor(user=username, color='gray')
+        user_color.save()
     return redirect('/')
 
 
@@ -67,7 +75,9 @@ def websites(request):
         info['resource_type'] = website.resource_type
         info['link'] = website.link
         websites_dict[index] = info
-    return render(request, 'websites.html', {'websites_dict': websites_dict})
+    user = UserColor.objects.get(user=request.user.username)
+    color = user.color
+    return render(request, 'websites.html', {'websites_dict': websites_dict, 'color': color})
 
 
 def clinics(request):
@@ -86,9 +96,9 @@ def clinics(request):
         info['link'] = clinic.link
         clinics_dict[index] = info
     json_var = json.dumps(clinics_dict)
-    print(json_var)
-
-    return render(request, 'clinics.html', {'json_var': json_var})
+    user = UserColor.objects.get(user=request.user.username)
+    color = user.color
+    return render(request, 'clinics.html', {'json_var': json_var, 'color': color})
 
 
 def call_centres(request):
@@ -106,11 +116,25 @@ def call_centres(request):
         info['resource_type'] = centre.resource_type
         info['link'] = centre.link
         centres_dict[index] = info
-    return render(request, 'call-centres.html', {'centres_dict': centres_dict})
+    user = UserColor.objects.get(user=request.user.username)
+    color = user.color
+    return render(request, 'call-centres.html', {'centres_dict': centres_dict, 'color': color})
 
 
 def about(request):
     return render(request, 'about.html')
 
+
 def settings(request):
-    return render(request, 'settings.html')
+    user = UserColor.objects.get(user=request.user.username)
+    color = user.color
+    return render(request, 'settings.html', {'color': color})
+
+
+def change_color(request):
+    if request.method == "POST":
+        color = request.POST.get('color')
+        user = UserColor.objects.get(user=request.user.username)
+        user.color=color
+        user.save()
+    return redirect('/')
