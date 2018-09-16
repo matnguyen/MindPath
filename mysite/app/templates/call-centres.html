@@ -26,7 +26,11 @@
 
             <h2>Call Centers</h2>
 
-
+        {% for key, centre in centres_dict.items %}
+            Name: {{centre.name}}<br>
+            City: {{centre.city}}<br>
+            Phone number: {{centre.phone_no}}<br><br>
+        {% endfor %}
 
         </div>
         <!-- avatars -->
