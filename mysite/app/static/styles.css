@@ -80,6 +80,12 @@ h2 {
 #apps {
     left: 75%;
     bottom: 30%;
+    background: none;
+}
+
+#apps img {
+    position: relative;
+    right: 5%;
 }
 
 #call-centres {
@@ -89,7 +95,8 @@ h2 {
 }
 
 #call-centres img {
-    position: inherit;
+    position: relative;
+    right: 10%;
     width: 60%;
 }
 
@@ -111,7 +118,8 @@ h2 {
 }
 
 #settings img {
-    position: inherit;
+    position: relative;
+    right: 5%;
 }
 
 #about {
