@@ -1,0 +1,41 @@
+/*
+beige: #EEE1CC
+dark blue: #234C6C
+lt blue: #84CBDD
+med blue: #398DA7
+ */
+
+body {
+    background: #234C6C;
+    font-color: #D0E2F3;
+    font-family: font-family: 'Open Sans', sans-serif;;
+}
+
+#wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+
+#clinic, #apps, #call-centers {
+    position: absolute;
+    width: 25%;
+    height: 30%;
+    background: #84CBDD;
+}
+
+#apps {
+
+}
+
+#call-centers {
+
+}
+
+#avatar-self {
+    color: #84CBDD;
+}
+
+.avatar-others {
+    color: gray;
+}
