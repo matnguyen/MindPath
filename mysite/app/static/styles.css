@@ -11,6 +11,12 @@ body {
     font-family: font-family: 'Open Sans', sans-serif;;
 }
 
+h2 {
+    font-size: 12px;
+    color: #5D8AA8;
+    font-weight: initial;
+}
+
 #logo {
     width: 8rem;
     margin: 0 auto;
@@ -59,7 +65,7 @@ body {
     max-height: 50px;
 }
 
-#clinic, #apps, #call-centers {
+#clinic, #apps, #call-centres {
     position: absolute;
     width: 25%;
     height: 30%;
@@ -67,7 +73,7 @@ body {
 }
 
 .building {
-    font-size: 2em;
+    font-size: 0.8em;
     text-align: center;
 }
 
@@ -76,8 +82,15 @@ body {
     bottom: 30%;
 }
 
-#call-centers {
+#call-centres {
     left: 35%;
+    background: none;
+    /*border: red 1px solid;*/
+}
+
+#call-centres img {
+    position: inherit;
+    width: 60%;
 }
 
 #clinic {
@@ -94,6 +107,11 @@ body {
 #settings {
     bottom: 0px;
     left: 10%;
+    background: none;
+}
+
+#settings img {
+    position: inherit;
 }
 
 #about {
@@ -102,12 +120,8 @@ body {
 }
 
 #avatar-self {
-    /*background: url("Assets/grayppl.svg") no-repeat;*/
-    /*background-size: 100px 82px;*/
-    /*background-color: #ccc;*/
     height: 100px;
     width: 100px;
-    /*border-radius: 50%;*/
     position: absolute;
 }
 

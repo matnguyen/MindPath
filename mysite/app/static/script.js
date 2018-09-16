@@ -12,6 +12,15 @@ const dxMax = 10;
 const dyMin = -10;
 const dyMax = 10;
 
+const selfAvatarSpeed = 5;
+
+var directions = {
+    'left': false,
+    'right': false,
+    'up': false,
+    'down': false
+};
+
 // Get a random number between min and max, inclusive.
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -33,49 +42,61 @@ function getNumOthers() {
     return NUM_PEOPLE;
 }
 
+var keys = {};
+keys.LEFT = 37;
+keys.RIGHT = 39;
+keys.UP = 38;
+keys.DOWN = 40;
+
 // Checks what key is being pressed.
 function moveSelection(e) {
-    e = e || window.event;
-    if (e.keyCode == 37) {
-        moveLeft();
+    if (e.preventDefault) {
+        e.preventDefault();
     }
-    else if (e.keyCode == 39) {
-        moveRight();
+    else {
+        e.returnValue = false;
     }
-    if (e.keyCode == 38) {
-        moveUp();
-    }
-    else if (e.keyCode == 40) {
-        moveDown();
-    }
+    var kc = e.keyCode || e.which;
+    keys[kc] = e.type == 'keydown';
 }
-
 
 function moveLeft() {
     var obj = document.getElementById("avatar-self");
-    obj.style.left = parseInt(obj.style.left) - 5 + 'px';
+    obj.style.left = parseInt(obj.style.left) - selfAvatarSpeed + 'px';
 }
 
 function moveRight() {
     var obj = document.getElementById("avatar-self");
-    obj.style.left = parseInt(obj.style.left) + 5 + 'px';
+    obj.style.left = parseInt(obj.style.left) + selfAvatarSpeed + 'px';
 }
 
 function moveUp() {
     var obj = document.getElementById("avatar-self");
-    obj.style.top = parseInt(obj.style.top) - 5 + 'px';
+    obj.style.top = parseInt(obj.style.top) - selfAvatarSpeed + 'px';
 }
 
 function moveDown() {
     var obj = document.getElementById("avatar-self");
-    obj.style.top = parseInt(obj.style.top) + 5 + 'px';
+    obj.style.top = parseInt(obj.style.top) + selfAvatarSpeed + 'px';
 }
 
+var detectCharacterMovement = function(){
+    if ( keys[keys.LEFT] ) {
+        moveLeft();
+    }
+    if ( keys[keys.RIGHT] ) {
+        moveRight();
+    }
+    if ( keys[keys.UP] ) {
+        moveUp();
+    }
+    if ( keys[keys.DOWN] ) {
+        moveDown();
+    }
+};
+
 function gameLoop() {
-    // change position based on speed
-    // moveSelection();
-    // setTimeout("gameLoop()", 10);
-    window.addEventListener('keydown', moveSelection);
+    setInterval(function() {detectCharacterMovement();}, 30);
     setInterval(updateOtherAvatars, 100);
 }
 
@@ -95,10 +116,22 @@ function updateOtherAvatars() {
         // other.css('left', left+5);
         // other.css('top', top+5);
     });
-    // console.log(others);
 }
 
+
 $(function() {
+    document.body.onkeyup =
+    document.body.onkeydown = function(e){
+        if (e.preventDefault) {
+            e.preventDefault();
+        }
+        else {
+            e.returnValue = false;
+        }
+        var kc = e.keyCode || e.which;
+        keys[kc] = e.type == 'keydown';
+    };
+
     // Create avatars for each other person
     var numOthers = getNumOthers();
     for (var i = 0; i < numOthers; i++) {
