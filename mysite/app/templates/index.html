@@ -4,6 +4,9 @@
 
 <head>
     <title>Lumohacks 2018 project</title>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
     <script src="{% static 'jquery-3.3.1.min.js' %}"></script>
@@ -25,16 +28,16 @@
         <!--Sign in and registration-->
         {% if not request.user.is_authenticated %}
             <form method="POST" action="authenticate_user" id="login">{% csrf_token %}
-                <input type="text" name="username" value="Username"/>
-                <input type="text" name="password" value="Password"/>
+                <input type="text" name="username" value=""  placeholder="Username"/>
+                <input type="password" name="password" value=""  placeholder="Password"/>
                 <input type="submit" value="Login"/>
             </form>
 
             <form method="POST" action="register_user" id="registration">{% csrf_token %}
-                <input type="text" name="username" value="Username"/>
-                <input type="text" name="email" value="Email"/>
-                <input type="text" name="password" value="Password"/>
-                <input type="text" name="password_confirm" value="Confirm your password"/>
+                <input type="text" name="username" placeholder="Username" value=""/>
+                <input type="text" name="email" placeholder="Email" value=""/>
+                <input type="password" name="password"  placeholder="Password" value=""/>
+                <input type="text" name="password_confirm"  placeholder="Password" value=""/>
                 <input type="submit" value="Register"/>
             </form>
         {% endif %}
@@ -78,7 +81,9 @@
 
         <a href="about">
             <div id="about">
-                <h2 class="building">About</h2>
+                <h2 class="building">About
+                    <img src="{% static 'Assets/about.svg' %}" alt="About">
+                </h2>
             </div>
         </a>
 

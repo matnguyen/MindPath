@@ -69,7 +69,7 @@ h2 {
     position: absolute;
     width: 25%;
     height: 30%;
-    background: #84CBDD;
+    /*background: #84CBDD;*/
 }
 
 .building {
@@ -80,7 +80,6 @@ h2 {
 #apps {
     left: 75%;
     bottom: 30%;
-    background: none;
 }
 
 #apps img {
@@ -90,7 +89,6 @@ h2 {
 
 #call-centres {
     left: 35%;
-    background: none;
     /*border: red 1px solid;*/
 }
 
@@ -106,7 +104,6 @@ h2 {
 
 #settings, #about {
     position: absolute;
-    background: #fff;
     width: 20%;
     height: 20%;
 }
@@ -125,6 +122,11 @@ h2 {
 #about {
     bottom: 0px;
     right: 20%;
+}
+
+#settings img {
+    position: relative;
+    right: 5%;
 }
 
 #avatar-self {
