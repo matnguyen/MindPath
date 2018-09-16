@@ -140,9 +140,13 @@ input[type="submit"] {
     right: 5%;
 }
 
+/*#about {*/
+    /*bottom: 0px;*/
+    /*right: 20%;*/
+/*}*/
 #about {
-    bottom: 0px;
-    right: 20%;
+    color: black;
+    text-align: center;
 }
 
 #about img {
