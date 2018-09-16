@@ -59,7 +59,7 @@ body {
     max-height: 50px;
 }
 
-#clinic, #apps, #call-centers {
+#clinic, #apps, #call-centres {
     position: absolute;
     width: 25%;
     height: 30%;
@@ -76,8 +76,16 @@ body {
     bottom: 30%;
 }
 
-#call-centers {
+#call-centres {
     left: 35%;
+    background: none;
+    /*border: red 1px solid;*/
+}
+
+#call-centres img {
+    position: inherit;
+    top: -35%;
+    left: 0%;
 }
 
 #clinic {
@@ -94,6 +102,11 @@ body {
 #settings {
     bottom: 0px;
     left: 10%;
+    background: none;
+}
+
+#settings img {
+    position: inherit;
 }
 
 #about {
