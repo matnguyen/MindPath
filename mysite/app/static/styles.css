@@ -11,6 +11,10 @@ body {
     font-family: font-family: 'Open Sans', sans-serif;;
 }
 
+#logo {
+    width: 200px;
+}
+
 #wrapper {
     height: 100%;
     width: 100%;
