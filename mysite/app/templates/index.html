@@ -5,7 +5,9 @@
 <head>
     <title>Lumohacks 2018 project</title>
 
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <!-- bootstrap -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
@@ -14,7 +16,7 @@
 </head>
 
 <body onload="gameLoop()" onkeydown="" onkeyup="">
-    <div id ="wrapper">
+    <!--<div class="modal" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">-->
 
         <h1><img src="{% static 'Assets/Title.png' %}" alt="Mind Path" id="logo"></h1>
         <p id="logo-caption">Exploring your mental health.</p>
@@ -27,19 +29,23 @@
 
         <!--Sign in and registration-->
         {% if not request.user.is_authenticated %}
-            <form method="POST" action="authenticate_user" id="login">{% csrf_token %}
-                <input type="text" name="username" value=""  placeholder="Username"/>
-                <input type="password" name="password" value=""  placeholder="Password"/>
-                <input type="submit" value="Login"/>
-            </form>
+    	  <!--<div class="modal-dialog  modal-dialog-centered">-->
+				<!--<div class="modal-content loginmodal-container">-->
+                    <!--<form method="POST" action="authenticate_user" id="login">{% csrf_token %}-->
+                        <input type="text" name="username" value=""  placeholder="Username"/> <br>
+                        <input type="password" name="password" value=""  placeholder="Password"/>
+                        <input type="submit" value="Login"/>
+                    </form>
 
-            <form method="POST" action="register_user" id="registration">{% csrf_token %}
-                <input type="text" name="username" placeholder="Username" value=""/>
-                <input type="text" name="email" placeholder="Email" value=""/>
-                <input type="password" name="password"  placeholder="Password" value=""/>
-                <input type="text" name="password_confirm"  placeholder="Password" value=""/>
-                <input type="submit" value="Register"/>
-            </form>
+                    <form method="POST" action="register_user" id="registration">{% csrf_token %}
+                        <input type="text" name="username" placeholder="Username" value=""/><br>
+                        <input type="text" name="email" placeholder="Email" value=""/><br>
+                        <input type="password" name="password"  placeholder="Password" value=""/><br>
+                        <input type="text" name="password_confirm"  placeholder="Password" value=""/>
+                        <input type="submit" value="Register"/>
+                    </form>
+                <!--</div>-->
+          <!--</div>-->
         {% endif %}
 
         <!--Trigger messages (either error or succesful registration)-->
@@ -58,15 +64,18 @@
 
         <div id="canvas">
             <!-- buildings -->
+
             <a href="clinics">
                 <div id="clinic">
-                  <h2 class="building">Clinics</h2>
+                  <h2 class="building">Clinics
+                      <img src="{% static 'Assets/clinic.svg' %}" alt="Clinic">
+                  </h2>
                 </div>
             </a>
 
-            <a href="apps">
+            <a href="websites">
                 <div id="apps">
-                    <h2 class="building">Apps
+                    <h2 class="building">Websites
                         <img src="{% static 'Assets/apps.svg' %}" alt="Apps">
                     </h2>
                 </div>
@@ -97,15 +106,14 @@
             </a>
 
             <!-- avatars -->
-            <div id="avatar-self" style="left: 0; top: 0">
+            <div id="avatar-self" style="left: 300px; top: 300px">
                 <img src="{% static 'Assets/grayppl.svg' %}">
             </div>
 
             <div id="avatar-others">
+
             </div>
         </div>
-
-
     </div> <!--end of wrapper -->
 </body>
 </html>

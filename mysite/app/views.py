@@ -50,8 +50,8 @@ def search(request):
     return redirect("https://www.google.com/search?q=%s" % query)
 
 
-def apps(request):
-    return render(request, 'apps.html')
+def websites(request):
+    return render(request, 'websites.html')
 
 
 def clinics(request):

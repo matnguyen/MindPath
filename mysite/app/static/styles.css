@@ -5,8 +5,13 @@ lt blue: #84CBDD
 med blue: #5D8AA8
  */
 
+<<<<<<< HEAD
 /*body, html {height:100%;}*/
 /*body {overflow: hidden; }*/
+
+.modal {
+    display: initial;
+}
 
 body {
     background: #E6F7FF;
@@ -16,12 +21,11 @@ body {
 
 h2 {
     font-size: 12px;
-    color: #5D8AA8;
     font-weight: initial;
 }
 
 #logo {
-    width: 8rem;
+    width: 12rem;
     margin: 0 auto;
     display: block;;
 }
@@ -30,7 +34,7 @@ h2 {
     text-align: center;
     color: #5D8AA8;
     font-variant-caps: all-small-caps;
-    margin-top: -20px;
+    margin-top: -10px;
 }
 
 #wrapper {
@@ -52,7 +56,7 @@ h2 {
     max-width: 584px;
 }
 
-#google-search input[type="submit"] {
+input[type="submit"] {
     font-size: 12px;
     font-weight: 600;
     background: #5D8AA8;
@@ -76,8 +80,17 @@ h2 {
 }
 
 .building {
-    font-size: 0.8em;
+    font-size: 1em;
     text-align: center;
+    font-variant: all-small-caps;
+}
+
+.building:hover img {
+    opacity: 0.5;
+}
+
+.building:hover {
+    font-weight: bold;
 }
 
 #apps {
@@ -105,6 +118,11 @@ h2 {
     bottom: 25%;
 }
 
+#call-centres img {
+    position: relative;
+    right: 10%;
+}
+
 #settings, #about {
     position: absolute;
     width: 20%;
@@ -113,7 +131,7 @@ h2 {
 
 #settings {
     bottom: 0px;
-    left: 10%;
+    left: 20%;
     background: none;
 }
 
@@ -127,14 +145,14 @@ h2 {
     right: 20%;
 }
 
-#settings img {
+#about img {
     position: relative;
     right: 5%;
 }
 
 #avatar-self {
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
     position: absolute;
 }
 
