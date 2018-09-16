@@ -25,6 +25,19 @@
             <input type="submit" value="Google Search" />
         </form>
 
+            <h2>Call Centers</h2>
+
+        {% for key, centre in centres_dict.items %}
+            Name: {{centre.name}}<br>
+            City: {{centre.city}}<br>
+            Phone number: {{centre.phone_no}}<br><br>
+        {% endfor %}
+
+        </div>
+        <!-- avatars -->
+        <div id="avatar-self" style="left: 0; top: 0">
+            <img src="{% static 'Assets/grayppl.svg' %}">
+
         <div id="canvas">
             <div class="resource" id="resource1">
                 <h4>Call center 1</h4>
@@ -46,8 +59,8 @@
             <div id="avatar-self" style="left: 0; top: 0">
                 <img src="{% static 'Assets/grayppl.svg' %}" >
             </div>
-        </div>
 
+        </div>
 
     </div> <!--end of wrapper -->
 </body>
