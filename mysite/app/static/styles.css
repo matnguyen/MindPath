@@ -13,6 +13,9 @@ med blue: #5D8AA8
     /*opacity: 0.5!;*/
 /*}*/
 
+body, html {height:100%;}
+body {overflow: hidden; }
+
 body {
     background: #E6F7FF;
     color: #5D8AA8;
@@ -164,4 +167,5 @@ input[type="submit"] {
     /*color: blue;*/
     height: 100px;
     width: 100px;
+    z-index: -5000;
 }

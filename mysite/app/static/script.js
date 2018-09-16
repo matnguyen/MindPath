@@ -6,6 +6,16 @@ const xMax = 800;
 const yMin = 100;
 const yMax = 600;
 
+const colorMin = 0;
+const colorMax = 4;
+const colors = [
+    'blueppl.svg',
+    'greenppl.svg',
+    'orangeppl.svg',
+    'purpleppl.svg',
+    'yellowppl.svg'
+];
+
 // lower and upper limit for changing speed of other avatars
 const dxMin = -10;
 const dxMax = 10;
@@ -28,8 +38,11 @@ function getRandomInt(min, max) {
 
 // Generates a <div> DOM object that represents an avatar_other.
 function createAvatarOther() {
+
+    const color = colors[getRandomInt(colorMin, colorMax)];
+
     var obj = $("<div class='avatar-other'></div>");
-    var avatar = $("<img src='static/Assets/blueppl.svg'>");
+    var avatar = $("<img src='static/Assets/" + color + "'>");
     obj.css("position", "absolute");
     obj.css("left", getRandomInt(xMin, xMax));
     obj.css("top", getRandomInt(yMin, yMax));
@@ -130,7 +143,7 @@ var tickrate2 = 100;
 
 function gameLoop() {
     setInterval(function() {detectCharacterMovement();}, tickrate);
-    setInterval(updateOtherAvatars, tickrate2);
+    // setInterval(updateOtherAvatars, tickrate2);
 }
 
 function updateOtherAvatars() {
@@ -143,6 +156,7 @@ function updateOtherAvatars() {
 
         other.style.left = parseInt(other.style.left) + xChange + 'px';
         other.style.top = parseInt(other.style.top) + yChange + 'px';
+
         // var left = other.css('left');
         // var top = other.css('top');
         //
@@ -153,19 +167,6 @@ function updateOtherAvatars() {
 
 
 $(function() {
-    // document.body.onkeyup =
-    // document.body.onkeydown = function(e){
-    //     console.log(e);
-    //     if (e.preventDefault) {
-    //         e.preventDefault();
-    //     }
-    //     else {
-    //         e.returnValue = false;
-    //     }
-    //     var kc = e.keyCode || e.which;
-    //     keys[kc] = e.type == 'keydown';
-    // };
-
     // Create avatars for each other person
     var numOthers = getNumOthers();
     for (var i = 0; i < numOthers; i++) {
