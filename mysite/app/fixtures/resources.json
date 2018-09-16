@@ -1,0 +1,347 @@
+[
+  {
+    "model": "app.resources",
+    "id": 1,
+    "fields": {
+      "name": "24 Hour Bilingual Telephone Support",
+      "address": "N/A",
+      "city": "Canada-wide",
+      "state": "Canada-wide",
+      "country": "Canada",
+      "phone_no": "1-800-268-7708",
+      "health_type": "PTSD",
+      "resource_type": "call-center",
+      "link": "N/A"
+    }
+  },
+  {
+    "model": "app.resources",
+    "id": 2,
+    "fields": {
+      "name": "Family Information Line",
+      "address": "N/A",
+      "city": "Canada-wide",
+      "state": "Canada-wide",
+      "country": "Canada",
+      "phone_no": "1-800-866-4546",
+      "health_type": "PTSD",
+      "resource_type": "call-center",
+      "link": "N/A"
+    }
+  },
+  {
+    "model": "app.resources",
+    "id": 3,
+    "fields": {
+      "name": "CHIMO Service Crisis Intervention Program",
+      "address": "N/A",
+      "city": "Richmond, South Delta, Ladner, Tsawwassen",
+      "state": "BC",
+      "country": "Canada",
+      "phone_no": "604-279-7070",
+      "health_type": "suicide",
+      "resource_type": "call-center",
+      "link": "N/A"
+    }
+  },
+  {
+    "model": "app.resources",
+    "id": 4,
+    "fields": {
+      "name": "Crisis Center for Northern BC",
+      "address": "Prince George",
+      "city": "Northern BC",
+      "state": "BC",
+      "country": "Canada",
+      "phone_no": "1-888-562-1214",
+      "health_type": "suicide",
+      "resource_type": "call-center",
+      "link": "N/A"
+    }
+  },
+  {
+    "model": "app.resources",
+    "id": 5,
+    "fields": {
+      "name": "Youth Crisis Center for Northern BC",
+      "address": "N/A",
+      "city": "Prince George",
+      "state": "BC",
+      "country": "Canada",
+      "phone_no": "1-888-564-8336",
+      "health_type": "suicide",
+      "resource_type": "call-center",
+      "link": "N/A"
+    }
+  },
+  {
+    "model": "app.resources",
+    "id": 6,
+    "fields": {
+      "name": "Crisis Intervention & Suicide Prevention Center of BC",
+      "address": "N/A",
+      "city": "Vancouver, North Vancouver, Bowen Island, West Vancouver, Burnaby",
+      "state": "BC",
+      "country": "Canada",
+      "phone_no": "604-872-3311",
+      "health_type": "suicide",
+      "resource_type": "call-center",
+      "link": "N/A"
+    }
+  },
+  {
+    "model": "app.resources",
+    "id": 7,
+    "fields": {
+      "name": "Crisis Intervention & Suicide Prevention Center of BC",
+      "address": "N/A",
+      "city": "Powell River, Sunshine Coast, Squamish, Whistler, Pemberton, Howe Sound",
+      "state": "BC",
+      "country": "Canada",
+      "phone_no": "1-866-661-3311",
+      "health_type": "suicide",
+      "resource_type": "call-center",
+      "link": "N/A"
+    }
+  },
+  {
+    "model": "app.resources",
+    "id": 8,
+    "fields": {
+      "name": "310 Mental Health Support Line",
+      "address": "N/A",
+      "city": "Province-wide",
+      "state": "BC",
+      "country": "Canada",
+      "phone_no": "310-6789",
+      "health_type": "suicide",
+      "resource_type": "call-center",
+      "link": "www.crisisline.bc.ca"
+    }
+  },
+  {
+    "model": "app.resources",
+    "id": 9,
+    "fields": {
+      "name": "Aboriginal KUU-US Crisis Line Society",
+      "address": "N/A",
+      "city": "Province-wide",
+      "state": "BC",
+      "country": "Canada",
+      "phone_no": "1-800-588-8717",
+      "health_type": "suicide",
+      "resource_type": "call-center",
+      "link": ""
+    }
+  },
+  {
+    "model": "app.resources",
+    "id": 10,
+    "fields": {
+      "name": "Mental Health Commission of Canada",
+      "address": "N/A",
+      "city": "Canada-wide",
+      "state": "Canada-wide",
+      "country": "Canada",
+      "phone_no": "N/A",
+      "health_type": "depression",
+      "resource_type": "website",
+      "link": "http://www.mentalhealthcommission.ca"
+    }
+  },
+  {
+    "model": "app.resources",
+    "id": 11,
+    "fields": {
+      "name": "Canadian Mental Health Association",
+      "address": "N/A",
+      "city": "Canada-wide",
+      "state": "Canada-wide",
+      "country": "Canada",
+      "phone_no": "N/A",
+      "health_type": "depression",
+      "resource_type": "website",
+      "link": "https://cmha.ca/"
+    }
+  },
+  {
+    "model": "app.resources",
+    "id": 12,
+    "fields": {
+      "name": "Tema Conter Memorial Trust",
+      "address": "N/A",
+      "city": "Canada-wide",
+      "state": "Canada-wide",
+      "country": "Canada",
+      "phone_no": "N/A",
+      "health_type": "depression",
+      "resource_type": "website",
+      "link": "https://www.tema.ca/"
+    }
+  },
+  {
+    "model": "app.resources",
+    "id": 13,
+    "fields": {
+      "name": "First Responders First",
+      "address": "N/A",
+      "city": "Canada-wide",
+      "state": "Canada-wide",
+      "country": "Canada",
+      "phone_no": "N/A",
+      "health_type": "depression",
+      "resource_type": "website",
+      "link": "http://www.firstrespondersfirst.ca/"
+    }
+  },
+  {
+    "model": "app.resources",
+    "id": 14,
+    "fields": {
+      "name": "Vancouver Adult Mental Health",
+      "address": "711 W 12th Ave",
+      "city": "Vancouver",
+      "state": "BC",
+      "country": "Canada",
+      "phone_no": "604-875-8248",
+      "health_type": "general",
+      "resource_type": "clinic",
+      "link": "N/A"
+    }
+  },
+  {
+    "model": "app.resources",
+    "id": 15,
+    "fields": {
+      "name": "Vancouver Coastal Health Authority",
+      "address": "1200 W 73rd Ave #220",
+      "city": "Vancouver",
+      "state": "BC",
+      "country": "Canada",
+      "phone_no": "604-266-6124",
+      "health_type": "general",
+      "resource_type": "clinic",
+      "link": "N/A"
+    }
+  },
+  {
+    "model": "app.resources",
+    "id": 16,
+    "fields": {
+      "name": "Mood Disorders Association of BC",
+      "address": "789 W Pender St #480",
+      "city": "Vancouver",
+      "state": "BC",
+      "country": "Canada",
+      "phone_no": "604-873-0103",
+      "health_type": "depression",
+      "resource_type": "clinic",
+      "link": "N/A"
+    }
+  },
+  {
+    "model": "app.resources",
+    "id": 16,
+    "fields": {
+      "name": "Strathcona Community Mental Health Team",
+      "address": "330 Heatley Ave",
+      "city": "Vancouver",
+      "state": "BC",
+      "country": "Canada",
+      "phone_no": "604-253-4401",
+      "health_type": "general",
+      "resource_type": "clinic",
+      "link": "N/A"
+    }
+  },
+  {
+    "model": "app.resources",
+    "id": 17,
+    "fields": {
+      "name": "BC Mental Health & Substance Use Services",
+      "address": "4500 Oak St",
+      "city": "Vancouver",
+      "state": "BC",
+      "country": "Canada",
+      "phone_no": "604-524-7734",
+      "health_type": "general",
+      "resource_type": "clinic",
+      "link": "N/A"
+    }
+  },
+  {
+    "model": "app.resources",
+    "id": 18,
+    "fields": {
+      "name": "Sunshine Coast Health Center",
+      "address": "601 W Broadway",
+      "city": "Vancouver",
+      "state": "BC",
+      "country": "Canada",
+      "phone_no": "604-879-2653",
+      "health_type": "general",
+      "resource_type": "clinic",
+      "link": "N/A"
+    }
+  },
+  {
+    "model": "app.resources",
+    "id": 19,
+    "fields": {
+      "name": "H.R. Mental Wellness Center",
+      "address": "1190 W 10th Ave",
+      "city": "Vancouver",
+      "state": "BC",
+      "country": "Canada",
+      "phone_no": "604-630-6865",
+      "health_type": "general",
+      "resource_type": "clinic",
+      "link": "N/A"
+    }
+  },
+  {
+    "model": "app.resources",
+    "id": 20,
+    "fields": {
+      "name": "Burnaby Center for Mental Health and Addiction",
+      "address": "3405 Willingdon Ave",
+      "city": "Burnaby",
+      "state": "BC",
+      "country": "Canada",
+      "phone_no": "604-675-3950",
+      "health_type": "general",
+      "resource_type": "clinic",
+      "link": "N/A"
+    }
+  },
+  {
+    "model": "app.resources",
+    "id": 21,
+    "fields": {
+      "name": "Richmond Mental Health Team",
+      "address": "7671 Alderbridge Way #210",
+      "city": "Richmond",
+      "state": "BC",
+      "country": "Canada",
+      "phone_no": "604-675-3975",
+      "health_type": "general",
+      "resource_type": "clinic",
+      "link": "N/A"
+    }
+  },
+  {
+    "model": "app.resources",
+    "id": 22,
+    "fields": {
+      "name": "Community Mental Wellness Association of Canada",
+      "address": "5726 Minoru Blvd",
+      "city": "Richmond",
+      "state": "BC",
+      "country": "Canada",
+      "phone_no": "604-273-1791",
+      "health_type": "general",
+      "resource_type": "clinic",
+      "link": "N/A"
+    }
+  }
+]

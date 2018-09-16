@@ -5,26 +5,33 @@ lt blue: #84CBDD
 med blue: #5D8AA8
  */
 
+/*body, html {height:100%;}*/
+/*body {overflow: hidden; }*/
+
 .modal {
     display: initial;
 }
 
-/*.fade {*/
-    /*opacity: 0.5!;*/
-/*}*/
-
-body, html {height:100%;}
-body {overflow: hidden; }
+.fade {
+    /*opacity: 0.2!important;*/
+    display: none;
+}
 
 body {
     background: #E6F7FF;
-    color: #5D8AA8;
-    font-family: font-family: 'Open Sans', sans-serif;;
+    color: #D0E2F3;
+    font-family: 'Open Sans', sans-serif;
 }
 
 h2 {
     font-size: 12px;
     font-weight: initial;
+}
+
+#logout {
+    position: absolute;
+    top: 5px;
+    right: 5px;
 }
 
 #logo {
@@ -154,8 +161,8 @@ input[type="submit"] {
 }
 
 #avatar-self {
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
     position: absolute;
 }
 
@@ -168,4 +175,11 @@ input[type="submit"] {
     height: 100px;
     width: 100px;
     z-index: -5000;
+}
+
+#canvas {
+    position: relative;
+    margin: auto;
+    /*width: 1200px;*/
+    /*height: 600px;*/
 }

@@ -1,8 +1,8 @@
-var NUM_PEOPLE = 10;
+var NUM_PEOPLE = 100;
 
 // lower and upper limit for spawning avatar-others
 const xMin = 100;
-const xMax = 800;
+const xMax = 1200;
 const yMin = 100;
 const yMax = 600;
 
@@ -44,6 +44,7 @@ function createAvatarOther() {
     var obj = $("<div class='avatar-other'></div>");
     var avatar = $("<img src='static/Assets/" + color + "'>");
     obj.css("position", "absolute");
+
     obj.css("left", getRandomInt(xMin, xMax));
     obj.css("top", getRandomInt(yMin, yMax));
 
@@ -63,12 +64,6 @@ var keyDown = {
     'DOWN': false
 };
 
-// var keyMap = {
-//   'LEFT':  37,
-//   'UP':    38,
-//   'RIGHT': 39,
-//   'DOWN':  40
-// };
 var keyMap = {
     37: 'LEFT',
     38: 'UP',
@@ -78,18 +73,6 @@ var keyMap = {
 
 $('html').keydown(function(e){ console.log(e.which); keyDown[keyMap[e.which]] = true;  });
 $('html').keyup(function(e){  keyDown[keyMap[e.which]] = false; });
-
-// // Checks what key is being pressed.
-// function moveSelection(e) {
-//     if (e.preventDefault) {
-//         e.preventDefault();
-//     }
-//     else {
-//         e.returnValue = false;
-//     }
-//     var kc = e.keyCode || e.which;
-//     keys[kc] = e.type == 'keydown';
-// }
 
 function moveLeft() {
     var obj = document.getElementById("avatar-self");
@@ -112,18 +95,6 @@ function moveDown() {
 }
 
 var detectCharacterMovement = function(){
-    // if ( keys[keys.LEFT] ) {
-    //     moveLeft();
-    // }
-    // if ( keys[keys.RIGHT] ) {
-    //     moveRight();
-    // }
-    // if ( keys[keys.UP] ) {
-    //     moveUp();
-    // }
-    // if ( keys[keys.DOWN] ) {
-    //     moveDown();
-    // }
     if ( keyDown['LEFT']) {
         moveLeft();
     }
@@ -139,7 +110,6 @@ var detectCharacterMovement = function(){
 };
 
 var tickrate = 30;
-var tickrate2 = 100;
 
 function gameLoop() {
     setInterval(function() {detectCharacterMovement();}, tickrate);
@@ -157,11 +127,6 @@ function updateOtherAvatars() {
         other.style.left = parseInt(other.style.left) + xChange + 'px';
         other.style.top = parseInt(other.style.top) + yChange + 'px';
 
-        // var left = other.css('left');
-        // var top = other.css('top');
-        //
-        // other.css('left', left+5);
-        // other.css('top', top+5);
     });
 }
 
