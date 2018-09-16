@@ -5,12 +5,14 @@
 <head>
     <title>Lumohacks 2018 project - Websites</title>
     <!-- bootstrap -->
+
+    <script src="{% static 'jquery-3.3.1.min.js' %}"></script>
+
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
-    <script src="{% static 'jquery-3.3.1.min.js' %}"></script>
     <script src="{% static 'script.js' %}"></script>
     
 </head>
@@ -29,16 +31,18 @@
         <a href="../" id="back"><img src="{% static 'Assets/arrow.png' %}" alt="Back button"></a>
 
         {% for key, website in websites_dict.items %}
-        <div class="resource">
-            <h4>{{website.name}}</h4>
-            <a href={{website.link}}>
-                <img src="{% static 'Assets/website.png' %}" class="website">
-            </a>
-        </div>
+
+        <a href={{website.link}}>
+            <div class="resource">
+                <h4 class="building">{{website.name}}
+                    <img src="{% static 'Assets/website.png' %}" class="website">
+                </h4>
+            </div>
+        </a>
         {% endfor %}
 
         <!-- avatars -->
-        <div id="avatar-self" style="left: 0; top: 0">
+        <div id="avatar-self" style="left: 700px; top: 400px">
             {% if color == "gray" %}
                 <img src="{% static 'Assets/grayppl.svg' %}">
             {% endif %}

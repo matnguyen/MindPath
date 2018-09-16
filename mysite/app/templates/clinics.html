@@ -15,7 +15,7 @@
     <script src="{% static 'script.js' %}"></script>
 
 </head>
-<body>
+<body onload="gameLoop()" onkeydown="" onkeyup="">
     <div id="wrapper">
         <h1><img src="{% static 'Assets/Title.png' %}" alt="Mind Path" id="logo"></h1>
         <p id="logo-caption">Exploring your mental health.</p>
@@ -37,7 +37,7 @@
         </div>
 
         <!-- avatars -->
-    <div id="avatar-self" style="left: 0; top: 0">
+    <div id="avatar-self" style="left: 100px; top: 100px">
         {% if color == "gray" %}
             <img src="{% static 'Assets/grayppl.svg' %}">
         {% endif %}

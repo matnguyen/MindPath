@@ -217,8 +217,8 @@ input[type="submit"], .btn {
 }
 
 #avatar-self {
-    height: 150px;
-    width: 150px;
+    height: 50px;
+    width: 50px;
     position: absolute;
 }
 
@@ -228,8 +228,8 @@ input[type="submit"], .btn {
 
 .avatar-other {
     /*color: blue;*/
-    height: 100px;
-    width: 100px;
+    height: 30px;
+    width: 30px;
     z-index: -5000;
 }
 
@@ -241,13 +241,21 @@ input[type="submit"], .btn {
 }
 
 .resource {
-    display: inline-flex;
+    display: inline-block;
     margin-left: 7%;
     width: 17%;
-    height: 300px;
+    /*height: 300px;*/
 }
 
 .phone-icon, .website{
     width: 100px;
     height: 100px;
+}
+
+.resource:hover .resource-details{
+    background-color: #fff;
+    color: #000;
+    visibility: visible !important;
+    padding: 10px;
+    margin: 10px;
 }

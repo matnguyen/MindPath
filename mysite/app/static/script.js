@@ -72,7 +72,10 @@ var keyMap = {
 };
 
 $('html').keydown(function(e){
+
+    // 13 is Enter
     if (e.which === 13) {
+
         checkCollision();
     }
     keyDown[keyMap[e.which]] = true;
@@ -89,10 +92,14 @@ function collision($div1, $div2) {
       var r1 = x1 + w1;
       var x2 = $div2.offset().left;
       var y2 = $div2.offset().top;
+
+
       var h2 = $div2.outerHeight(true);
       var w2 = $div2.outerWidth(true);
       var b2 = y2 + h2;
       var r2 = x2 + w2;
+
+
 
       if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) return false;
       return true;
@@ -101,33 +108,34 @@ function collision($div1, $div2) {
 
 
 function checkCollision() {
-
+    //
     var $avatar = $('#avatar-self');
-    var $clinic = $('#clinic');
-    var $callCentres = $('#call-centres');
-    var $apps = $('#apps');
-    var $about = $('#about');
-    var $settings = $('#settings');
-    var buildings = [$clinic, $apps, $callCentres, $about, $settings];
 
-    var i;
-    for (i = 0; i < buildings.length; i++) {
-        console.log($(buildings[i]));
-        var collides = collision($avatar, buildings[i]);
+
+
+    // var $clinic = $('#clinic');
+    // var $callCentres = $('#call-centres');
+    // var $apps = $('#apps');
+    // var $about = $('#about');
+    // var $settings = $('#settings');
+    // var buildings = [$clinic, $apps, $callCentres, $about, $settings];
+
+    $('.building').each(function (i) {
+
+        console.log("a");
+        var collides = collision($avatar, $(this));
         if (collides) {
-            break;
+            var $collidedBuilding = $(this);
+
+            // get building's parent
+            var href = $collidedBuilding.parent().parent().attr('href');
+
+            // console.log(href);
+            window.location.href = href;
+            return false;
         }
-    }
+    });
 
-    var $collidedBuilding = buildings[i];
-
-    // get building's parent
-    var href = $collidedBuilding.parent().attr('href');
-
-    window.location.href = href;
-    // if avatar-self collides with clinic, apps, call-centres, about, settings:
-        // get parent
-    // go that lik
 }
 
 function moveLeft() {
@@ -206,6 +214,8 @@ $(function() {
         createAvatarOther();
     }
 });
+
+$
 
 
 // Do we create an object? or do we create a javascript variable?
