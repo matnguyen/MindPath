@@ -1,8 +1,8 @@
-var NUM_PEOPLE = 10;
+var NUM_PEOPLE = 100;
 
 // lower and upper limit for spawning avatar-others
 const xMin = 100;
-const xMax = 800;
+const xMax = 1200;
 const yMin = 100;
 const yMax = 600;
 
@@ -44,6 +44,7 @@ function createAvatarOther() {
     var obj = $("<div class='avatar-other'></div>");
     var avatar = $("<img src='static/Assets/" + color + "'>");
     obj.css("position", "absolute");
+
     obj.css("left", getRandomInt(xMin, xMax));
     obj.css("top", getRandomInt(yMin, yMax));
 
@@ -78,18 +79,6 @@ var keyMap = {
 
 $('html').keydown(function(e){ console.log(e.which); keyDown[keyMap[e.which]] = true;  });
 $('html').keyup(function(e){  keyDown[keyMap[e.which]] = false; });
-
-// // Checks what key is being pressed.
-// function moveSelection(e) {
-//     if (e.preventDefault) {
-//         e.preventDefault();
-//     }
-//     else {
-//         e.returnValue = false;
-//     }
-//     var kc = e.keyCode || e.which;
-//     keys[kc] = e.type == 'keydown';
-// }
 
 function moveLeft() {
     var obj = document.getElementById("avatar-self");
@@ -139,7 +128,6 @@ var detectCharacterMovement = function(){
 };
 
 var tickrate = 30;
-var tickrate2 = 100;
 
 function gameLoop() {
     setInterval(function() {detectCharacterMovement();}, tickrate);

@@ -5,13 +5,13 @@ lt blue: #84CBDD
 med blue: #5D8AA8
  */
 
-body, html {height:100%;}
-body {overflow: hidden; }
+/*body, html {height:100%;}*/
+/*body {overflow: hidden; }*/
 
 body {
     background: #E6F7FF;
     color: #D0E2F3;
-    font-family: font-family: 'Open Sans', sans-serif;;
+    font-family: 'Open Sans', sans-serif;
 }
 
 h2 {
@@ -147,4 +147,11 @@ h2 {
     height: 100px;
     width: 100px;
     z-index: -5000;
+}
+
+#canvas {
+    position: relative;
+    margin: auto;
+    /*width: 1200px;*/
+    /*height: 600px;*/
 }

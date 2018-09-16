@@ -56,53 +56,56 @@
             <a href="logout_user">LOGOUT</a>
         {% endif %}
 
-        <!-- buildings -->
-        <a href="clinics">
-            <div id="clinic">
-              <h2 class="building">Clinics</h2>
-            </div>
-        </a>
+        <div id="canvas">
+            <!-- buildings -->
+            <a href="clinics">
+                <div id="clinic">
+                  <h2 class="building">Clinics</h2>
+                </div>
+            </a>
 
-        <a href="apps">
-            <div id="apps">
-                <h2 class="building">Apps
-                    <img src="{% static 'Assets/apps.svg' %}" alt="Apps">
-                </h2>
-            </div>
-        </a>
+            <a href="apps">
+                <div id="apps">
+                    <h2 class="building">Apps
+                        <img src="{% static 'Assets/apps.svg' %}" alt="Apps">
+                    </h2>
+                </div>
+            </a>
 
-        <a href="call_centres">
-            <div id="call-centres">
-                <h2 class="building">Call Centres <br/>
-                    <img src="{% static 'Assets/callcentre.svg' %}" alt="Call Centre">
-                </h2>
-            </div>
-        </a>
+            <a href="call_centres">
+                <div id="call-centres">
+                    <h2 class="building">Call Centres <br/>
+                        <img src="{% static 'Assets/callcentre.svg' %}" alt="Call Centre">
+                    </h2>
+                </div>
+            </a>
 
-        <a href="about">
-            <div id="about">
-                <h2 class="building">About
-                    <img src="{% static 'Assets/about.svg' %}" alt="About">
-                </h2>
-            </div>
-        </a>
+            <a href="about">
+                <div id="about">
+                    <h2 class="building">About
+                        <img src="{% static 'Assets/about.svg' %}" alt="About">
+                    </h2>
+                </div>
+            </a>
 
-        <a href="settings">
-            <div id="settings">
-                <h2 class="building">Settings
-                    <img src="{% static 'Assets/settings.svg' %}" alt="Settings">
-                </h2>
-            </div>
-        </a>
+            <a href="settings">
+                <div id="settings">
+                    <h2 class="building">Settings
+                        <img src="{% static 'Assets/settings.svg' %}" alt="Settings">
+                    </h2>
+                </div>
+            </a>
 
-        <!-- avatars -->
-        <div id="avatar-self" style="left: 0; top: 0">
-            <img src="{% static 'Assets/grayppl.svg' %}">
+            <!-- avatars -->
+            <div id="avatar-self" style="left: 0; top: 0">
+                <img src="{% static 'Assets/grayppl.svg' %}">
+            </div>
+
+            <div id="avatar-others">
+            </div>
         </div>
 
-        <div id="avatar-others">
-        </div>
+
     </div> <!--end of wrapper -->
-    </canvas>
 </body>
 </html>
