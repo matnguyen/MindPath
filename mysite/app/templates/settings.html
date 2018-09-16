@@ -16,27 +16,21 @@
 <body>
    <div id="wrapper">
 
-        <h1><img src="{% static 'Assets/Title.png' %}" alt="Mind Path" id="logo"></h1>
-        <p id="logo-caption">Exploring your mental health.</p>
-        <!-- google search bar -->
-        <form method="POST" action="search" id="google-search">{% csrf_token %}
-            <input type="text" name="handle" value="" />
-            <input type="submit" value="Google Search" />
-        </form>
+       <h1><img src="{% static 'Assets/Title.png' %}" alt="Mind Path" id="logo"></h1>
+       <p id="logo-caption">Exploring your mental health.</p>
 
-        <div id="settings">
-            <h2>Settings</h2>
+       <!-- google search bar -->
+       <form method="POST" action="search" id="google-search">{% csrf_token %}
+           <input type="text" name="handle" value="" />
+           <input type="submit" value="Google Search" />
+       </form>
 
-
-
-        </div>
-        <!-- avatars -->
-        <div id="avatar-self" style="left: 0; top: 0">
-            <img src="{% static 'Assets/grayppl.svg' %}">
-        </div>
-
-        <div id="avatar-others">
-        </div>
-    </div>
+       <h3>Choose a color:</h3>
+       <p>Red</p>
+       <p>Blue</p>
+       <p>Green</p>
+       <p>Yellow</p>
+       <p>Purple</p>
+   </div>
 </body>
 </html>

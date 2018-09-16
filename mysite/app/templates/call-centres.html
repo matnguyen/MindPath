@@ -18,24 +18,37 @@
 
         <h1><img src="{% static 'Assets/Title.png' %}" alt="Mind Path" id="logo"></h1>
         <p id="logo-caption">Exploring your mental health.</p>
+
         <!-- google search bar -->
         <form method="POST" action="search" id="google-search">{% csrf_token %}
             <input type="text" name="handle" value="" />
             <input type="submit" value="Google Search" />
         </form>
 
-            <h2>Call Centers</h2>
-
-
-
+        <div id="canvas">
+            <div class="resource" id="resource1">
+                <h4>Call center 1</h4>
+                <img src="{% static 'Assets/phone-icon.png' %}" class="phone-icon">
+            </div>
+            <div class="resource" id="resource2">
+                <h4>Call center 2</h4>
+                <img src="{% static 'Assets/phone-icon.png' %}" class="phone-icon">
+            </div>
+            <div class="resource" id="resource3">
+                <h4>Call center 3</h4>
+                <img src="{% static 'Assets/phone-icon.png' %}" class="phone-icon">
+            </div>
+            <div class="resource" id="resource4">
+                <h4>Call center 4</h4>
+                <img src="{% static 'Assets/phone-icon.png' %}" class="phone-icon">
+            </div>
+            <!-- avatars -->
+            <div id="avatar-self" style="left: 0; top: 0">
+                <img src="{% static 'Assets/grayppl.svg' %}" >
+            </div>
         </div>
-        <!-- avatars -->
-        <div id="avatar-self" style="left: 0; top: 0">
-            <img src="{% static 'Assets/grayppl.svg' %}">
-        </div>
 
-        <div id="avatar-others">
-        </div>
+
     </div> <!--end of wrapper -->
 </body>
 </html>
