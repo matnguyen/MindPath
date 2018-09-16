@@ -4,14 +4,16 @@
 
 <head>
     <title>Lumohacks 2018 project - Clinics</title>
+
     <!-- bootstrap -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="{% static 'jquery-3.3.1.min.js' %}"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
-    <script src="{% static 'jquery-3.3.1.min.js' %}"></script>
     <script src="{% static 'script.js' %}"></script>
+
 </head>
 <body>
     <div id="wrapper">
@@ -31,15 +33,15 @@
 
 
 
-            <script>
-            function myMap() {
-            var mapProp= {
-                center:new google.maps.LatLng(51.508742,-0.120850),
-                zoom:5,
-            };
-            var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-            }
-            </script>
+            <!--<script>-->
+            <!--function myMap() {-->
+            <!--var mapProp= {-->
+                <!--center:new google.maps.LatLng(51.508742,-0.120850),-->
+                <!--zoom:5,-->
+            <!--};-->
+            <!--var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);-->
+            <!--}-->
+            <!--</script>-->
         </div>
 
         <!-- avatars -->
@@ -49,9 +51,9 @@
     </div>
 
     <script src="{% static 'showClinics.js' %}"></script>
-    <div>
-        <div id="avatar-self">
-    </div>
+    <!--<div>-->
+        <!--<div id="avatar-self">-->
+    <!--</div>-->
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqQQC3gGOG8PnUPLusjzUKyWXnJ72kX-8&callback=myMap"></script>
 </body>
