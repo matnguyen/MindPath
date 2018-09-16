@@ -13,7 +13,7 @@
     <script src="{% static 'jquery-3.3.1.min.js' %}"></script>
     <script src="{% static 'script.js' %}"></script>
 </head>
-<body>
+<body onload="gameLoop()" onkeydown="" onkeyup="">
     <div id="wrapper">
         <h1><img src="{% static 'Assets/Title.png' %}" alt="Mind Path" id="logo"></h1>
         <p id="logo-caption">Exploring your mental health.</p>
@@ -23,7 +23,7 @@
             <input type="submit" value="Google Search" />
         </form>
 
-        <h2>Apps</h2>
+        <h2>Websites</h2>
 
         <a href="../" id="back"><img src="{% static 'Assets/arrow.png' %}" alt="Back button"></a>
 
