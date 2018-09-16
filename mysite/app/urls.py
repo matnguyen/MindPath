@@ -14,5 +14,9 @@ urlpatterns = [
     path('clinics', views.clinics, name='clinics'),
     path('call_centres', views.call_centres, name='call_centres'),
     path('about', views.about, name='about'),
+<<<<<<< HEAD
     path('settings', views.settings, name='settings'),
+=======
+
+>>>>>>> 814d04a1093ba409388133cc55861d5b6a2793bb
 ]
