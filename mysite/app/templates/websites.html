@@ -23,6 +23,12 @@
             <input type="submit" value="Google Search" />
         </form>
 
+        {% for key, website in websites_dict.items %}
+            Name: {{website.name}}<br>
+            City: {{website.city}}<br>
+            Phone number: {{website.phone_no}}<br><br>
+        {% endfor %}
+
         <div class="resource" id="resource1">
             <h4>10 Tips to Understand PTSD</h4>
             <a href="http://healmyptsd.com/10-tips">
