@@ -16,7 +16,6 @@ body {
     width: 100%;
 }
 
-
 #clinic, #apps, #call-centers {
     position: absolute;
     width: 25%;
@@ -43,9 +42,20 @@ body {
 }
 
 #avatar-self {
-    color: #84CBDD;
+    height: 10px;
+    width: 10px;
+    background-color: gold;
+    border-radius: 50%;
 }
 
-.avatar-others {
+#avatar-others {
     color: gray;
+}
+
+.avatar-other {
+    /*color: blue;*/
+    height: 10px;
+    width: 10px;
+    background-color: darkred;
+    border-radius: 50%;
 }
