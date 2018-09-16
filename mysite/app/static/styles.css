@@ -5,6 +5,9 @@ lt blue: #84CBDD
 med blue: #5D8AA8
  */
 
+/*body, html {height:100%;}*/
+/*body {overflow: hidden; }*/
+
 .modal {
     display: initial;
 }
@@ -14,13 +17,10 @@ med blue: #5D8AA8
     display: none;
 }
 
-body, html {height:100%;}
-body {overflow: hidden; }
-
 body {
     background: #E6F7FF;
-    color: #5D8AA8;
-    font-family: font-family: 'Open Sans', sans-serif;;
+    color: #D0E2F3;
+    font-family: 'Open Sans', sans-serif;
 }
 
 h2 {
@@ -161,8 +161,8 @@ input[type="submit"] {
 }
 
 #avatar-self {
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
     position: absolute;
 }
 
@@ -175,4 +175,11 @@ input[type="submit"] {
     height: 100px;
     width: 100px;
     z-index: -5000;
+}
+
+#canvas {
+    position: relative;
+    margin: auto;
+    /*width: 1200px;*/
+    /*height: 600px;*/
 }
