@@ -12,8 +12,9 @@
     <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
     <script src="{% static 'jquery-3.3.1.min.js' %}"></script>
     <script src="{% static 'script.js' %}"></script>
+    
 </head>
-<body>
+<body onload="gameLoop()" onkeydown="" onkeyup="">
     <div id="wrapper">
         <h1><img src="{% static 'Assets/Title.png' %}" alt="Mind Path" id="logo"></h1>
         <p id="logo-caption">Exploring your mental health.</p>
@@ -23,39 +24,18 @@
             <input type="submit" value="Google Search" />
         </form>
 
-        <h2>Apps</h2>
+        <h2>Websites</h2>
 
-        <a href="index"><img src="{% static 'Assets/arrow.png' %}" alt="Back button" id="back"></a>
+        <a href="../" id="back"><img src="{% static 'Assets/arrow.png' %}" alt="Back button"></a>
 
         {% for key, website in websites_dict.items %}
-            Name: {{website.name}}<br>
-            Phone number: {{website.link}}<br><br>
+        <div class="resource">
+            <h4>{{website.name}}</h4>
+            <a href={{website.link}}>
+                <img src="{% static 'Assets/website.png' %}" class="website">
+            </a>
+        </div>
         {% endfor %}
-
-        <div class="resource" id="resource1">
-            <h4>10 Tips to Understand PTSD</h4>
-            <a href="http://healmyptsd.com/10-tips">
-                <img src="{% static 'Assets/website.png' %}" class="website">
-            </a>
-        </div>
-        <div class="resource" id="resource2">
-            <h4>Mental Health America: PTSD</h4>
-            <a href="http://www.mentalhealthamerica.net/conditions/post-traumatic-stress-disorder">
-                <img src="{% static 'Assets/website.png' %}" class="website">
-            </a>
-        </div>
-        <div class="resource" id="resource3">
-            <h4>Dealing With Panic Attacks</h4>
-            <a href="https://www.youtube.com/watch?v=7-iNOFD27G4">
-                <img src="{% static 'Assets/website.png' %}" class="website">
-            </a>
-        </div>
-        <div class="resource" id="resource4">
-            <h4>Self Help for Self Harm</h4>
-            <a href="http://au.reachout.com/self-help-for-self-harm">
-                <img src="{% static 'Assets/website.png' %}" class="website">
-            </a>
-        </div>
 
         <!-- avatars -->
         <div id="avatar-self" style="left: 0; top: 0">
