@@ -130,7 +130,7 @@ var tickrate2 = 100;
 
 function gameLoop() {
     setInterval(function() {detectCharacterMovement();}, tickrate);
-    setInterval(updateOtherAvatars, tickrate2);
+    // setInterval(updateOtherAvatars, tickrate2);
 }
 
 function updateOtherAvatars() {
