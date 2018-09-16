@@ -3,12 +3,18 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
-from .models import Resources
+from .models import Resources, UserColor
+# from .forms import ColorForm
 
 
 # Create your views here.
 def index(request):
-    return render(request, 'index.html')
+    if request.user.is_authenticated:
+        user = UserColor.objects.get(user=request.user.username)
+        color = user.color
+        return render(request, 'index.html', {'color': color})
+    else:
+        return render(request, 'index.html')
 
 
 def authenticate_user(request):
@@ -37,6 +43,8 @@ def register_user(request):
         messages.add_message(request, messages.INFO, "Succesfully registered!")
         user = User.objects.create_user(username, email, password)
         user.save()
+        user_color = UserColor(user=username, color='gray')
+        user_color.save()
     return redirect('/')
 
 
@@ -94,5 +102,15 @@ def call_centres(request):
 def about(request):
     return render(request, 'about.html')
 
+
 def settings(request):
     return render(request, 'settings.html')
+
+
+def change_color(request):
+    if request.method == "POST":
+        color = request.POST.get('color')
+        user = UserColor.objects.get(user=request.user.username)
+        user.color=color
+        user.save()
+    return redirect('/')

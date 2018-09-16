@@ -16,4 +16,5 @@ urlpatterns = [
     path('about', views.about, name='about'),
     path('settings', views.settings, name='settings'),
     path('index', views.index, name='index'),
+    path('change_color', views.change_color, name='change_color'),
 ]

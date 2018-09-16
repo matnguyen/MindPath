@@ -32,16 +32,17 @@
             <img src="{% static 'Assets/grayppl.svg' %}">
         </div>
 
-       <form>
+       <form method="POST" action="change_color" id="change_color">{% csrf_token %}
            <h3>Choose a color:</h3>
            <select name="color">
-               <option value="red">Red</option>
+               <option value="orange">Orange</option>
                <option value="blue">Blue</option>
                <option value="green">Green</option>
                <option value="yellow">Yellow</option>
                <option value="purple">Purple</option>
+               <option value="gray">Gray</option>
            </select>
-           <input type="submit">
+           <input type="submit" value="Submit">
        </form>
 
 
