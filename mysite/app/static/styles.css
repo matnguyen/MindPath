@@ -107,7 +107,10 @@ body {
     background: url("Assets/grayppl.svg") no-repeat;
     background-size: 100px 82px;
     background-color: #ccc;
+    height: 15px;
+    width: 15px;
     border-radius: 50%;
+    position: absolute;
 }
 
 #avatar-others {
