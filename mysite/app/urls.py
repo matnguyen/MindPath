@@ -15,4 +15,5 @@ urlpatterns = [
     path('call_centres', views.call_centres, name='call_centres'),
     path('about', views.about, name='about'),
     path('settings', views.settings, name='settings'),
+    path('index', views.index, name='index'),
 ]

@@ -23,9 +23,13 @@
             <input type="submit" value="Google Search" />
         </form>
 
+        <h2>Clinics</h2>
+
+        <a href="index"><img src="{% static 'Assets/arrow.png' %}" alt="Back button" id="back"></a>
+
         <div id="googleMap" style="width:100%;height:400px;"></div>
 
-            <h2>Clinics</h2>
+
 
             <script>
             function myMap() {
@@ -39,14 +43,15 @@
         </div>
 
         <!-- avatars -->
-        <div id="avatar-self" style="left: 0; top: 0">
-            <img src="{% static 'Assets/grayppl.svg' %}">
-    <div id="googleMap" style="width:100%;height:400px;"></div>
+    <div id="avatar-self" style="left: 0; top: 0">
+        <img src="{% static 'Assets/grayppl.svg' %}">
+        <div id="googleMap" style="width:100%;height:400px;"></div>
+    </div>
 
     <script src="{% static 'showClinics.js' %}"></script>
     <div>
         <div id="avatar-self">
-        </div>
+    </div>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqQQC3gGOG8PnUPLusjzUKyWXnJ72kX-8&callback=myMap"></script>
 </body>

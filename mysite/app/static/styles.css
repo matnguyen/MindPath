@@ -24,8 +24,8 @@ body {
 }
 
 h2 {
-    font-size: 12px;
-    font-weight: initial;
+    text-align: center;
+    color: #234C6C;
 }
 
 #logout {
@@ -74,12 +74,24 @@ input[type="submit"] {
     color: #fff;
 }
 
+#google-search input[type="submit"] {
+    font-size: 1em;
+    width: 120px;
+}
+
 #google-search input[type="text"], #google-search input[type="submit"] {
     padding:10px;
     border-radius: 2px;
     height: 8%;
     min-height: 40px;
     max-height: 50px;
+}
+
+#back {
+    width: 60px;
+    position: absolute;
+    left: 2%;
+    top: 20px;
 }
 
 #clinic, #apps, #call-centres {
@@ -90,7 +102,7 @@ input[type="submit"] {
 }
 
 .building {
-    font-size: 1em;
+    font-size: 1.5em;
     text-align: center;
     font-variant: all-small-caps;
 }
@@ -103,9 +115,10 @@ input[type="submit"] {
     font-weight: bold;
 }
 
-#apps {
-    left: 75%;
-    bottom: 30%;
+#apps { /* websites in html */
+    left: 39%;
+    /*bottom: 26%;*/
+    top: 50px;
 }
 
 #apps img {
@@ -114,8 +127,8 @@ input[type="submit"] {
 }
 
 #call-centres {
-    left: 35%;
-    /*border: red 1px solid;*/
+    left: 21%;
+    bottom: 10px;
 }
 
 #call-centres img {
@@ -125,7 +138,13 @@ input[type="submit"] {
 }
 
 #clinic {
-    bottom: 25%;
+    top: 20px;
+    left: -1%;
+}
+
+#clinic img {
+    position: relative;
+    left: -3%;
 }
 
 #call-centres img {
@@ -140,9 +159,8 @@ input[type="submit"] {
 }
 
 #settings {
-    bottom: 0px;
-    left: 20%;
-    background: none;
+    bottom: 15px;
+    right: 15%;
 }
 
 #settings img {
@@ -150,18 +168,14 @@ input[type="submit"] {
     right: 5%;
 }
 
-/*#about {*/
-    /*bottom: 0px;*/
-    /*right: 20%;*/
-/*}*/
 #about {
-    color: black;
-    text-align: center;
+    top: 54px;
+    right: -1%;
 }
 
 #about img {
     position: relative;
-    right: 5%;
+    right: 10%;
 }
 
 #avatar-self {
