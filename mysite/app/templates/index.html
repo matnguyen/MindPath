@@ -86,17 +86,19 @@
                     </form>
                 </div>
           </div>
-        <div class="fade">
-        {% endif %}
 
-        <!--Trigger messages (either error or succesful registration)-->
-        {% if messages %}
+         {% if messages %}
         <ul class="messages">
             {% for message in messages %}
             <h2{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</h2>
             {% endfor %}
         </ul>
         {% endif %}
+        <div class="fade">
+        {% endif %}
+
+        <!--Trigger messages (either error or succesful registration)-->
+
 
         <!--Logout button-->
         {% if request.user.is_authenticated %}
