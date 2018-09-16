@@ -150,13 +150,9 @@ input[type="submit"] {
     right: 5%;
 }
 
-/*#about {*/
-    /*bottom: 0px;*/
-    /*right: 20%;*/
-/*}*/
 #about {
-    color: black;
-    text-align: center;
+    bottom: 0px;
+    right: 20%;
 }
 
 #about img {
@@ -186,4 +182,9 @@ input[type="submit"] {
     margin: auto;
     /*width: 1200px;*/
     /*height: 600px;*/
+}
+
+.phone-icon, .website{
+    width: 100px;
+    height: 100px;
 }

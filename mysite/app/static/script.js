@@ -131,6 +131,10 @@ function updateOtherAvatars() {
 }
 
 
+// code for if you click on a website icon, it will pop open a div
+// and describe the website
+
+
 $(function() {
     // Create avatars for each other person
     var numOthers = getNumOthers();
