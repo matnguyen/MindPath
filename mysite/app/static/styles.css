@@ -79,11 +79,17 @@ h2 {
 }
 
 input[type="submit"], .btn {
-    font-size: 12px;
+    font-size: 1em;
     font-weight: 600;
     background: #5D8AA8;
     border-color: #5D8AA8;
     color: #fff;
+}
+
+#signupBtn, #signupText {
+    text-align: center;
+    display: block;
+    margin: 10px auto;
 }
 
 #google-search input[type="submit"] {

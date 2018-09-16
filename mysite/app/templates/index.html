@@ -5,14 +5,32 @@
 <head>
     <title>Lumohacks 2018 project</title>
 
+    <script src="{% static 'jquery-3.3.1.min.js' %}"></script>
+
     <!-- bootstrap -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
-    <script src="{% static 'jquery-3.3.1.min.js' %}"></script>
     <script src="{% static 'script.js' %}"></script>
+    <script >
+        function showHideSignup() {
+          var signup = document.getElementById("registration");
+          var login = document.getElementById("login");
+          if (signup.style.display == "none") { //show to hide registration
+              signup.style.display = "block";
+              login.style.display = "none";
+              document.getElementById("signupText").innerHTML = "Already have an account?";
+              document.getElementById("signupBtn").innerHTML = "Log in";
+          } else { //hide to show registration
+              signup.style.display = "none";
+              login.style.display = "block";
+              document.getElementById("signupText").innerHTML = "Register a new account";
+              document.getElementById("signupBtn").innerHTML = "Sign up";
+          }
+        }
+    </script>
 </head>
 
 <body onload="gameLoop()" onkeydown="" onkeyup="">
@@ -44,16 +62,27 @@
                     </form>
 
                     <span>
-                        <p>Register a new account</p>
-                        <button class="form-control btn btn-primary signupBtn">Sign up</button>
+                        <p id="signupText">Register a new account</p>
+                        <button class="btn btn-primary" id="signupBtn" onclick="showHideSignup()" >Sign up</button>
                     </span>
 
                     <form method="POST" action="register_user" id="registration">{% csrf_token %}
-                        <input type="text" name="username" placeholder="Username" value=""/><br>
-                        <input type="text" name="email" placeholder="Email" value=""/><br>
-                        <input type="password" name="password"  placeholder="Password" value=""/><br>
-                        <input type="text" name="password_confirm"  placeholder="Password" value=""/>
-                        <input type="submit" value="Register"/>
+                        <div class="form-group">
+                            <input type="text" name="username" placeholder="Username" value=""  class="form-control"/>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" name="email" placeholder="Email" value=""  class="form-control"/>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="password" name="password"  placeholder="Password" value=""  class="form-control"/>
+                        </div>
+
+                         <div class="form-group">
+                            <input type="password" name="password_confirm"  placeholder="Password Confirmation" value=""  class="form-control"/>
+                         </div>
+                        <input type="submit" value="Register"  class="form-control"/>
                     </form>
                 </div>
           </div>
