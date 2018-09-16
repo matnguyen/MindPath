@@ -102,14 +102,12 @@ body {
 }
 
 #avatar-self {
-    height: 10px;
-    width: 10px;
-    background: url("Assets/grayppl.svg") no-repeat;
-    background-size: 100px 82px;
-    background-color: #ccc;
-    height: 15px;
-    width: 15px;
-    border-radius: 50%;
+    /*background: url("Assets/grayppl.svg") no-repeat;*/
+    /*background-size: 100px 82px;*/
+    /*background-color: #ccc;*/
+    height: 100px;
+    width: 100px;
+    /*border-radius: 50%;*/
     position: absolute;
 }
 
@@ -119,8 +117,6 @@ body {
 
 .avatar-other {
     /*color: blue;*/
-    height: 10px;
-    width: 10px;
-    background-color: darkred;
-    border-radius: 50%;
+    height: 100px;
+    width: 100px;
 }
