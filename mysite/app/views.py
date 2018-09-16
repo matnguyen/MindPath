@@ -52,7 +52,21 @@ def search(request):
 
 
 def websites(request):
-    return render(request, 'websites.html')
+    websites = Resources.objects.filter(resource_type="website")
+    websites_dict = {}
+    for index, website in enumerate(websites):
+        info = {}
+        info['name'] = website.name
+        info['address'] = website.address
+        info['city'] = website.city
+        info['state'] = website.state
+        info['country'] = website.country
+        info['phone_no'] = website.phone_no
+        info['health_type'] = website.health_type
+        info['resource_type'] = website.resource_type
+        info['link'] = website.link
+        websites_dict[index] = info
+    return render(request, 'websites.html', {'websites_dict': websites_dict})
 
 
 def clinics(request):
