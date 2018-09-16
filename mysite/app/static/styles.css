@@ -5,6 +5,9 @@ lt blue: #84CBDD
 med blue: #5D8AA8
  */
 
+body, html {height:100%;}
+body {overflow: hidden; }
+
 body {
     background: #E6F7FF;
     color: #D0E2F3;

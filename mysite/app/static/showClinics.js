@@ -28,7 +28,6 @@ function myMap() {
     var geocoder = new google.maps.Geocoder();
 
     var geocode = function(loc) {
-        console.log("geocoding...");
         geocoder.geocode( {address: loc}, function(results, status) {
           if (status == 'OK') {
             // map.setCenter(results[0].geometry.location);
@@ -42,18 +41,9 @@ function myMap() {
         });
     }
 
-    // var marker2 = new google.maps.Marker({
-    //     position: {lat: clinics[0].lat, lng: clinics[0].lng},
-    //     map: map,
-    //     title: clinics[0].name
-    // });
-
     locations.forEach(function(loc) {
         geocode(loc);
     })
-
-
-    //https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=YOUR_API_KEY
 
 }
 
