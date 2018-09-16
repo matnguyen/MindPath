@@ -32,7 +32,7 @@
         <div id="canvas">
 
         {% for key, centre in centres_dict.items %}
-        <div class="resource" style="display: inline-block; width: 400px; height: 300px;">
+        <div class="resource">
             <h4>{{centre.name}}</h4>
             <img src="{% static 'Assets/phone-icon.png' %}" class="phone-icon">
             <p class="resource-details" style="visibility: hidden;">
