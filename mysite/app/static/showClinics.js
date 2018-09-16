@@ -12,27 +12,17 @@ const defaultZoom = 14;
 //];
 
 function myMap(json_in) {
+    // console.log(json_in);/
 //    console.log("aylmao");
 //    var locations_json = JSON.parse(json_in);
 //    console.log("lmao");
+    locations_json = JSON.parse(locations_json);
 
-//    locations = {};
-//    fields = {};
-//
-//    for (var i = 0, location; i < locations_json.length; i++) {
-//        for (var j = 0; field; j < locations_json.i.length; j++) {
-//            field = locations_json.i[j];
-//            fields[] = field;
-//        }
-//        location = locations_json[i];
-//        locations[]
-//    }
-
-//    locations = [];
-//
-//    for (var i = 0; location; i < locations_json.length; i++) {
-//        locations.push(locations_json[i]['name'])
-//    }
+    var locations = [];
+    for (var k in locations_json) {
+        var location = locations_json[k];
+        locations.push(location['name']);
+    }
 
     var mapProp = {
         zoom: defaultZoom,

@@ -85,6 +85,8 @@ def clinics(request):
         info['link'] = clinic.link
         clinics_dict[index] = info
     json_var = json.dumps(clinics_dict)
+    print(json_var)
+
     return render(request, 'clinics.html', {'json_var': json_var})
 
 
