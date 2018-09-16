@@ -32,10 +32,21 @@
     	  <div class="modal-dialog  modal-dialog-centered">
 				<div class="modal-content loginmodal-container">
                     <form method="POST" action="authenticate_user" id="login">{% csrf_token %}
-                        <input type="text" name="username" value=""  placeholder="Username"/> <br>
-                        <input type="password" name="password" value=""  placeholder="Password"/>
-                        <input type="submit" value="Login"/>
+                        <div class="form-group">
+                            <input type="text" name="username" value=""  placeholder="Username"  class="form-control"/>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="password" name="password" value=""  placeholder="Password"  class="form-control"/>
+                        </div>
+
+                        <input type="submit" value="Login" class="form-control"/>
                     </form>
+
+                    <span>
+                        <p>Register a new account</p>
+                        <button class="form-control btn btn-primary signupBtn">Sign up</button>
+                    </span>
 
                     <form method="POST" action="register_user" id="registration">{% csrf_token %}
                         <input type="text" name="username" placeholder="Username" value=""/><br>

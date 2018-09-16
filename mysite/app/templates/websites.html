@@ -25,7 +25,7 @@
 
         <h2>Apps</h2>
 
-        <a href="index"><img src="{% static 'Assets/arrow.png' %}" alt="Back button" id="back"></a>
+        <a href="index" id="back"><img src="{% static 'Assets/arrow.png' %}" alt="Back button"></a>
 
         {% for key, website in websites_dict.items %}
             Name: {{website.name}}<br>
