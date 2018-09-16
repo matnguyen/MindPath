@@ -21,14 +21,22 @@
 
         <!--Sign in and registration-->
         {% if not request.user.is_authenticated %}
-            <form method="POST" action="authenticate_user" id="username">{% csrf_token %}
-                <input type="text" name="username" value=""/>
-                <input type="text" name="password" value=""/>
+            <form method="POST" action="authenticate_user" id="login">{% csrf_token %}
+                <input type="text" name="username" value="Username"/>
+                <input type="text" name="password" value="Password"/>
                 <input type="submit" value="Login"/>
+            </form>
+
+            <form method="POST" action="register_user" id="registration">{% csrf_token %}
+                <input type="text" name="username" value="Username"/>
+                <input type="text" name="email" value="Email"/>
+                <input type="text" name="password" value="Password"/>
+                <input type="text" name="password_confirm" value="Confirm your password"/>
+                <input type="submit" value="Register"/>
             </form>
         {% endif %}
 
-        <!--Check if username/password is valid-->
+        <!--Trigger messages (either error or succesful registration)-->
         {% if messages %}
         <ul class="messages">
             {% for message in messages %}
