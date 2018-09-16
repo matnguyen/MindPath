@@ -9,9 +9,10 @@ med blue: #5D8AA8
     display: initial;
 }
 
-/*.fade {*/
-    /*opacity: 0.5!;*/
-/*}*/
+.fade {
+    /*opacity: 0.2!important;*/
+    display: none;
+}
 
 body, html {height:100%;}
 body {overflow: hidden; }
@@ -25,6 +26,12 @@ body {
 h2 {
     font-size: 12px;
     font-weight: initial;
+}
+
+#logout {
+    position: absolute;
+    top: 5px;
+    right: 5px;
 }
 
 #logo {
