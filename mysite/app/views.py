@@ -74,7 +74,9 @@ def websites(request):
         info['resource_type'] = website.resource_type
         info['link'] = website.link
         websites_dict[index] = info
-    return render(request, 'websites.html', {'websites_dict': websites_dict})
+    user = UserColor.objects.get(user=request.user.username)
+    color = user.color
+    return render(request, 'websites.html', {'websites_dict': websites_dict, 'color': color})
 
 
 def clinics(request):
@@ -93,9 +95,9 @@ def clinics(request):
         info['link'] = clinic.link
         clinics_dict[index] = info
     json_var = json.dumps(clinics_dict)
-    print(json_var)
-
-    return render(request, 'clinics.html', {'json_var': json_var})
+    user = UserColor.objects.get(user=request.user.username)
+    color = user.color
+    return render(request, 'clinics.html', {'json_var': json_var, 'color': color})
 
 
 def call_centres(request):
@@ -113,7 +115,9 @@ def call_centres(request):
         info['resource_type'] = centre.resource_type
         info['link'] = centre.link
         centres_dict[index] = info
-    return render(request, 'call-centres.html', {'centres_dict': centres_dict})
+    user = UserColor.objects.get(user=request.user.username)
+    color = user.color
+    return render(request, 'call-centres.html', {'centres_dict': centres_dict, 'color': color})
 
 
 def about(request):
@@ -121,7 +125,9 @@ def about(request):
 
 
 def settings(request):
-    return render(request, 'settings.html')
+    user = UserColor.objects.get(user=request.user.username)
+    color = user.color
+    return render(request, 'settings.html', {'color': color})
 
 
 def change_color(request):
