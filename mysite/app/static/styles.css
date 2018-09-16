@@ -19,8 +19,20 @@ med blue: #5D8AA8
     margin: 3% auto;
 }
 
+.centerText {
+    text-align: center;
+}
+
 #registration {
     display: none;
+}
+
+#keys {
+    width: 80px;
+    float: right;
+    position: relative;
+    margin-top: 23%;
+    margin-right: 6px;
 }
 
 .fade {
@@ -38,6 +50,7 @@ body {
 h2 {
     text-align: center;
     color: #234C6C;
+    margin-bottom: 20px;
 }
 
 #logout {
@@ -62,6 +75,7 @@ h2 {
 #wrapper {
     height: 100%;
     width: 100%;
+    max-height: max-content;
 }
 
 #google-search {
@@ -224,6 +238,13 @@ input[type="submit"], .btn {
     margin: auto;
     /*width: 1200px;*/
     /*height: 600px;*/
+}
+
+.resource {
+    display: inline-flex;
+    margin-left: 7%;
+    width: 17%;
+    height: 300px;
 }
 
 .phone-icon, .website{

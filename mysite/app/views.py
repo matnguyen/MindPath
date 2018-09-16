@@ -1,10 +1,10 @@
 from django.contrib import messages
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from .models import Resources, UserColor
-# from .forms import ColorForm
+import json
+
 
 
 # Create your views here.
@@ -78,7 +78,24 @@ def websites(request):
 
 
 def clinics(request):
-    return render(request, 'clinics.html')
+    clinics = Resources.objects.filter(resource_type="clinic")
+    clinics_dict = {}
+    for index, clinic in enumerate(clinics):
+        info = {}
+        info['name'] = clinic.name
+        info['address'] = clinic.address
+        info['city'] = clinic.city
+        info['state'] = clinic.state
+        info['country'] = clinic.country
+        info['phone_no'] = clinic.phone_no
+        info['health_type'] = clinic.health_type
+        info['resource_type'] = clinic.resource_type
+        info['link'] = clinic.link
+        clinics_dict[index] = info
+    json_var = json.dumps(clinics_dict)
+    print(json_var)
+
+    return render(request, 'clinics.html', {'json_var': json_var})
 
 
 def call_centres(request):
