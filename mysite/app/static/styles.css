@@ -28,11 +28,21 @@ med blue: #5D8AA8
 }
 
 #keys {
-    width: 80px;
     float: right;
-    position: relative;
-    margin-top: 23%;
-    margin-right: 6px;
+    position: absolute;
+    margin-top: -10%;
+    width: 150px;
+    right: 0px;
+}
+
+#keys img {
+    width: 80px;
+    display: block;
+    margin: 0 auto;
+}
+
+#keys p {
+    text-align: center;
 }
 
 .fade {

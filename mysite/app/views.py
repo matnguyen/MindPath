@@ -46,6 +46,7 @@ def logout_user(request):
 
 
 def search(request):
+
     query = request.POST.get("handle", None)
     query = query.replace(" ", "+")
     return redirect("https://www.google.com/search?q=%s" % query)
