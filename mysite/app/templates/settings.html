@@ -5,15 +5,16 @@
 <head>
     <title>Lumohacks 2018 project - Settings</title>
      <!-- bootstrap -->
+    <script src="{% static 'jquery-3.3.1.min.js' %}"></script>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
-    <script src="{% static 'jquery-3.3.1.min.js' %}"></script>
     <script src="{% static 'script.js' %}"></script>
 </head>
-<body>
+
+<body onload="gameLoop()" onkeydown="" onkeyup="">
    <div id="wrapper">
         <h1><img src="{% static 'Assets/Title.png' %}" alt="Mind Path" id="logo"></h1>
         <p id="logo-caption">Exploring your mental health.</p>
@@ -25,21 +26,25 @@
 
         <h2>Settings</h2>
 
-        <a href="index" id="back"><img src="{% static 'Assets/arrow.png' %}" alt="Back button"></a>
+        <a href="../" id="back"><img src="{% static 'Assets/arrow.png' %}" alt="Back button"></a>
         <!-- avatars -->
         <div id="avatar-self" style="left: 0; top: 0">
             <img src="{% static 'Assets/grayppl.svg' %}">
         </div>
 
-        <div id="avatar-others">
-        </div>
+       <form>
+           <h3>Choose a color:</h3>
+           <select name="color">
+               <option value="red">Red</option>
+               <option value="blue">Blue</option>
+               <option value="green">Green</option>
+               <option value="yellow">Yellow</option>
+               <option value="purple">Purple</option>
+           </select>
+           <input type="submit">
+       </form>
 
-       <h3>Choose a color:</h3>
-       <p>Red</p>
-       <p>Blue</p>
-       <p>Green</p>
-       <p>Yellow</p>
-       <p>Purple</p>
+
    </div>
 </body>
 </html>
