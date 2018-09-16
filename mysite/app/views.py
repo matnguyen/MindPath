@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth import authenticate, login, logout
@@ -12,8 +13,10 @@ def authenticate_user(request):
     username = request.POST.get("username", None)
     password = request.POST.get("password", None)
     user = authenticate(username=username, password=password)
-    if user is not None:
+    if user:
         login(request, user)
+    if not user:
+        messages.add_message(request, messages.ERROR, "Incorrect username or password.")
     return redirect('/')
 
 

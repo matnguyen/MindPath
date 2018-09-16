@@ -28,6 +28,15 @@
             </form>
         {% endif %}
 
+        <!--Check if username/password is valid-->
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <h2{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</h2>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
         <!--Logout button-->
         {% if request.user.is_authenticated %}
             <a href="logout_user">LOGOUT</a>
