@@ -6,30 +6,37 @@
     <title>Lumohacks 2018 project</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
-
+    <script src="{% static 'jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'script.js' %}"></script>
 </head>
 
 <body>
-    <form method="POST" action="search">{% csrf_token %}
+<!--     <form method="POST" action="search">{% csrf_token %}
         text: <input type="text" name="handle" value=""<br>
         <input type="submit" value="submit">
-    </form>
-    <!--<div id ="wrapper">-->
-        <!--<div id="clinic">-->
-            <!--Clinics near me-->
-        <!--</div>-->
-        <!--<div id="apps">-->
-            <!--Apps-->
-        <!--</div>-->
-        <!--<div id="call-centers">-->
-            <!--Call Centers-->
-        <!--</div>-->
-        <!--<div id="avatar-self">-->
-            <!--My Avatar-->
-        <!--</div>-->
-        <!--<div class="avatar-others">-->
-            <!--others-->
-        <!--</div>-->
-    <!--</div> &lt;!&ndash;end of wrapper &ndash;&gt;-->
+    </form> -->
+    <div id ="wrapper">
+        <h1><img src="{% static 'Assets/Title.png' %}" alt="Mind Path" id="logo"></h1>
+        <div id="clinic">
+            <h2 class="building">Clinics</h2>
+        </div>
+        <div id="apps">
+            <h2 class="building">Apps</h2>
+        </div>
+        <div id="call-centers">
+            <h2 class="building">Call Centers</h2>
+        </div>
+        <div id="apps">
+            <h2 class="building">Apps</h2>
+        </div>
+        <div id="call-centers">
+            <h2 class="building">Call Centres</h2>
+        </div>
+        <div id="avatar-self">
+        </div>
+        <div id="avatar-others">
+        </div>
+    </div> <!--end of wrapper -->
+    </canvas>
 </body>
 </html>

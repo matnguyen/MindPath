@@ -7,15 +7,18 @@ med blue: #398DA7
 
 body {
     background: #234C6C;
-    font-color: #D0E2F3;
+    color: #D0E2F3;
     font-family: font-family: 'Open Sans', sans-serif;;
+}
+
+#logo {
+    width: 200px;
 }
 
 #wrapper {
     height: 100%;
     width: 100%;
 }
-
 
 #clinic, #apps, #call-centers {
     position: absolute;
@@ -24,18 +27,39 @@ body {
     background: #84CBDD;
 }
 
-#apps {
+.building {
+    font-size: 2em;
+    text-align: center;
+}
 
+#apps {
+    left: 75%;
+    bottom: 30%;
 }
 
 #call-centers {
+    left: 35%;
+}
 
+#clinic {
+    bottom: 25%;
 }
 
 #avatar-self {
-    color: #84CBDD;
+    height: 10px;
+    width: 10px;
+    background-color: gold;
+    border-radius: 50%;
 }
 
-.avatar-others {
+#avatar-others {
     color: gray;
+}
+
+.avatar-other {
+    /*color: blue;*/
+    height: 10px;
+    width: 10px;
+    background-color: darkred;
+    border-radius: 50%;
 }
