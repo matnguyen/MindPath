@@ -139,9 +139,9 @@ $(".phone-icon").click(function(){
 });
 
 // TODO : if you click outside then hide #info
-$(".outside").click(function()) {
+$(".outside").click(function() {
     $("#info").hide();
-}
+});
 
 $(function() {
     // Create avatars for each other person
