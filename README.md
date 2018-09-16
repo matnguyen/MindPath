@@ -1,4 +1,4 @@
-# lumohacks2018
+# MindPath - An Interactive Exploratory Resources Hub
 
 Our project is designed to assist first responders, which include: professional police officers, emergency responders, and firefighters. We take an evidence-based approach towards mental health. 
 
