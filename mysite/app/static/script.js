@@ -71,7 +71,7 @@ var keyMap = {
     40: 'DOWN'
 };
 
-$('html').keydown(function(e){ console.log(e.which); keyDown[keyMap[e.which]] = true;  });
+$('html').keydown(function(e){  keyDown[keyMap[e.which]] = true;  });
 $('html').keyup(function(e){  keyDown[keyMap[e.which]] = false; });
 
 function moveLeft() {
@@ -112,7 +112,7 @@ var detectCharacterMovement = function(){
 var tickrate = 30;
 
 function gameLoop() {
-    setInterval(function() {detectCharacterMovement();}, tickrate);
+    setInterval(function() {detectCharacterMovement(); }, tickrate);
     // setInterval(updateOtherAvatars, tickrate2);
 }
 
