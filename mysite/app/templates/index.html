@@ -12,7 +12,10 @@
 
 <body>
     <div id ="wrapper">
+
         <h1><img src="{% static 'Assets/Title.png' %}" alt="Mind Path" id="logo"></h1>
+        <p id="logo-caption">Exploring your mental health.</p>
+
         <!-- google search bar -->
         <form method="POST" action="search" id="google-search">{% csrf_token %}
             <input type="text" name="handle" value="" />
@@ -29,16 +32,18 @@
         <div id="call-centers">
             <h2 class="building">Call Centers</h2>
         </div>
-        <div id="apps">
-            <h2 class="building">Apps</h2>
+        <div id="about">
+            <h2 class="building">About</h2>
         </div>
-        <div id="call-centers">
-            <h2 class="building">Call Centres</h2>
+        <div id="settings">
+            <h2 class="building">Setting</h2>
         </div>
 
         <!-- avatars -->
         <div id="avatar-self">
+
         </div>
+
         <div id="avatar-others">
         </div>
     </div> <!--end of wrapper -->
