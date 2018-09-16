@@ -25,16 +25,16 @@
         <!--Sign in and registration-->
         {% if not request.user.is_authenticated %}
             <form method="POST" action="authenticate_user" id="login">{% csrf_token %}
-                <input type="text" name="username" value="Username"/>
-                <input type="text" name="password" value="Password"/>
+                <input type="text" name="username" value=""  placeholder="Username"/>
+                <input type="password" name="password" value=""  placeholder="Password"/>
                 <input type="submit" value="Login"/>
             </form>
 
             <form method="POST" action="register_user" id="registration">{% csrf_token %}
-                <input type="text" name="username" value="Username"/>
-                <input type="text" name="email" value="Email"/>
-                <input type="text" name="password" value="Password"/>
-                <input type="text" name="password_confirm" value="Confirm your password"/>
+                <input type="text" name="username" placeholder="Username" value=""/>
+                <input type="text" name="email" placeholder="Email" value=""/>
+                <input type="password" name="password"  placeholder="Password" value=""/>
+                <input type="text" name="password_confirm"  placeholder="Passwird" value=""/>
                 <input type="submit" value="Register"/>
             </form>
         {% endif %}
@@ -68,7 +68,7 @@
             </div>
         </a>
 
-        <a href="clinics">
+        <a href="call_centres">
             <div id="call-centres">
                 <h2 class="building">Call Centres <br/>
                     <img src="{% static 'Assets/callcentre.svg' %}" alt="Call Centre">
@@ -91,7 +91,7 @@
         </a>
 
         <!-- avatars -->
-        <div id="avatar-self">
+        <div id="avatar-self" style="left: 0; top: 0">
             <img src="{% static 'Assets/grayppl.svg' %}">
         </div>
 

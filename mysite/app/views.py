@@ -64,3 +64,6 @@ def call_centres(request):
 
 def about(request):
     return render(request, 'about.html')
+
+def settings(request):
+    return render(request, 'settings.html')

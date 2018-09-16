@@ -42,23 +42,41 @@ function getNumOthers() {
     return NUM_PEOPLE;
 }
 
-var keys = {};
-keys.LEFT = 37;
-keys.RIGHT = 39;
-keys.UP = 38;
-keys.DOWN = 40;
 
-// Checks what key is being pressed.
-function moveSelection(e) {
-    if (e.preventDefault) {
-        e.preventDefault();
-    }
-    else {
-        e.returnValue = false;
-    }
-    var kc = e.keyCode || e.which;
-    keys[kc] = e.type == 'keydown';
-}
+var keyDown = {
+    'LEFT': false,
+    'UP': false,
+    'RIGHT': false,
+    'DOWN': false
+};
+
+// var keyMap = {
+//   'LEFT':  37,
+//   'UP':    38,
+//   'RIGHT': 39,
+//   'DOWN':  40
+// };
+var keyMap = {
+    37: 'LEFT',
+    38: 'UP',
+    39: 'RIGHT',
+    40: 'DOWN'
+};
+
+$('html').keydown(function(e){ console.log(e.which); keyDown[keyMap[e.which]] = true;  });
+$('html').keyup(function(e){  keyDown[keyMap[e.which]] = false; });
+
+// // Checks what key is being pressed.
+// function moveSelection(e) {
+//     if (e.preventDefault) {
+//         e.preventDefault();
+//     }
+//     else {
+//         e.returnValue = false;
+//     }
+//     var kc = e.keyCode || e.which;
+//     keys[kc] = e.type == 'keydown';
+// }
 
 function moveLeft() {
     var obj = document.getElementById("avatar-self");
@@ -81,23 +99,38 @@ function moveDown() {
 }
 
 var detectCharacterMovement = function(){
-    if ( keys[keys.LEFT] ) {
+    // if ( keys[keys.LEFT] ) {
+    //     moveLeft();
+    // }
+    // if ( keys[keys.RIGHT] ) {
+    //     moveRight();
+    // }
+    // if ( keys[keys.UP] ) {
+    //     moveUp();
+    // }
+    // if ( keys[keys.DOWN] ) {
+    //     moveDown();
+    // }
+    if ( keyDown['LEFT']) {
         moveLeft();
     }
-    if ( keys[keys.RIGHT] ) {
+    if ( keyDown['RIGHT'] ) {
         moveRight();
     }
-    if ( keys[keys.UP] ) {
+    if ( keyDown['UP'] ) {
         moveUp();
     }
-    if ( keys[keys.DOWN] ) {
+    if ( keyDown['DOWN']) {
         moveDown();
     }
 };
 
+var tickrate = 30;
+var tickrate2 = 100;
+
 function gameLoop() {
-    setInterval(function() {detectCharacterMovement();}, 30);
-    setInterval(updateOtherAvatars, 100);
+    setInterval(function() {detectCharacterMovement();}, tickrate);
+    setInterval(updateOtherAvatars, tickrate2);
 }
 
 function updateOtherAvatars() {
@@ -120,17 +153,18 @@ function updateOtherAvatars() {
 
 
 $(function() {
-    document.body.onkeyup =
-    document.body.onkeydown = function(e){
-        if (e.preventDefault) {
-            e.preventDefault();
-        }
-        else {
-            e.returnValue = false;
-        }
-        var kc = e.keyCode || e.which;
-        keys[kc] = e.type == 'keydown';
-    };
+    // document.body.onkeyup =
+    // document.body.onkeydown = function(e){
+    //     console.log(e);
+    //     if (e.preventDefault) {
+    //         e.preventDefault();
+    //     }
+    //     else {
+    //         e.returnValue = false;
+    //     }
+    //     var kc = e.keyCode || e.which;
+    //     keys[kc] = e.type == 'keydown';
+    // };
 
     // Create avatars for each other person
     var numOthers = getNumOthers();
