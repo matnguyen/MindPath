@@ -23,25 +23,39 @@
         </form>
 
         <!-- buildings -->
-        <div id="clinic">
-            <h2 class="building">Clinics</h2>
-        </div>
-        <div id="apps">
-            <h2 class="building">Apps</h2>
-        </div>
-        <div id="call-centres">
-            <h2 class="building">Call Centers
-                <img src="{% static 'Assets/callcentre.svg' %}" alt="Call Centre">
-            </h2>
-        </div>
-        <div id="about">
-            <h2 class="building">About</h2>
-        </div>
-        <div id="settings">
-            <h2 class="building">Settings
-                <img src="{% static 'Assets/settings.svg' %}" alt="Settings">
-            </h2>
-        </div>
+        <a href="clinics.html">
+            <div id="clinic">
+              <h2 class="building">Clinics</h2>
+            </div>
+        </a>
+
+        <a href="apps.html">
+            <div id="apps">
+                <h2 class="building">Apps</h2>
+            </div>
+        </a>
+
+        <a href="clinics.html">
+            <div id="call-centres">
+                <h2 class="building">Call Centres <br/>
+                    <img src="{% static 'Assets/callcentre.svg' %}" alt="Call Centre">
+                </h2>
+            </div>
+        </a>
+
+        <a href="about.html">
+            <div id="about">
+                <h2 class="building">About</h2>
+            </div>
+        </a>
+
+        <a href="settings.html">
+            <div id="settings">
+                <h2 class="building">Settings
+                    <img src="{% static 'Assets/settings.svg' %}" alt="Settings">
+                </h2>
+            </div>
+        </a>
 
         <!-- avatars -->
         <div id="avatar-self">

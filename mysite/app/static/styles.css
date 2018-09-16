@@ -11,6 +11,12 @@ body {
     font-family: font-family: 'Open Sans', sans-serif;;
 }
 
+h2 {
+    font-size: 12px;
+    color: #5D8AA8;
+    font-weight: initial;
+}
+
 #logo {
     width: 8rem;
     margin: 0 auto;
@@ -67,7 +73,7 @@ body {
 }
 
 .building {
-    font-size: 2em;
+    font-size: 0.8em;
     text-align: center;
 }
 
@@ -84,8 +90,7 @@ body {
 
 #call-centres img {
     position: inherit;
-    top: -35%;
-    left: 0%;
+    width: 60%;
 }
 
 #clinic {
@@ -115,12 +120,8 @@ body {
 }
 
 #avatar-self {
-    /*background: url("Assets/grayppl.svg") no-repeat;*/
-    /*background-size: 100px 82px;*/
-    /*background-color: #ccc;*/
     height: 100px;
     width: 100px;
-    /*border-radius: 50%;*/
     position: absolute;
 }
 
