@@ -86,17 +86,19 @@
                     </form>
                 </div>
           </div>
-        <div class="fade">
-        {% endif %}
 
-        <!--Trigger messages (either error or succesful registration)-->
-        {% if messages %}
+         {% if messages %}
         <ul class="messages">
             {% for message in messages %}
             <h2{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</h2>
             {% endfor %}
         </ul>
         {% endif %}
+        <div class="fade">
+        {% endif %}
+
+        <!--Trigger messages (either error or succesful registration)-->
+
 
         <!--Logout button-->
         {% if request.user.is_authenticated %}
@@ -176,7 +178,12 @@
 
         </div>
     </div>
-    <img src="{% static 'Assets/keys.png' %}" id="keys" />
+
+    <div id="keys">
+        <img src="{% static 'Assets/keys.png' %}" />
+        <p class="small">Press the arrows on your keyboard to move your avatar.</p>
+    </div>
+
     </div> <!--end of wrapper -->
 </body>
 </html>
