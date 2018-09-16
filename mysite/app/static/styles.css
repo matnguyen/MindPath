@@ -170,7 +170,9 @@ input[type="submit"] {
 
 #about {
     top: 54px;
-    right: -1%;
+    /*right: -1%;*/
+    bottom: 0px;
+    right: 20%;
 }
 
 #about img {
@@ -200,4 +202,9 @@ input[type="submit"] {
     margin: auto;
     /*width: 1200px;*/
     /*height: 600px;*/
+}
+
+.phone-icon, .website{
+    width: 100px;
+    height: 100px;
 }

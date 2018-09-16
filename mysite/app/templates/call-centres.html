@@ -18,6 +18,7 @@
 
         <h1><img src="{% static 'Assets/Title.png' %}" alt="Mind Path" id="logo"></h1>
         <p id="logo-caption">Exploring your mental health.</p>
+
         <!-- google search bar -->
         <form method="POST" action="search" id="google-search">{% csrf_token %}
             <input type="text" name="handle" value="" />
@@ -28,9 +29,44 @@
 
         <a href="index"><img src="{% static 'Assets/arrow.png' %}" alt="Back button" id="back"></a>
 
-        <!-- avatars -->
-        <div id="avatar-self" style="left: 300px; top: 300px">
-                <img src="{% static 'Assets/grayppl.svg' %}">
+        {% for key, centre in centres_dict.items %}
+            Name: {{centre.name}}<br>
+            City: {{centre.city}}<br>
+            Phone number: {{centre.phone_no}}<br><br>
+        {% endfor %}
+
+        </div>
+
+        <div id="canvas">
+            <div class="resource" id="resource1">
+                <h4>Call center 1</h4>
+                <img src="{% static 'Assets/phone-icon.png' %}" class="phone-icon">
+            </div>
+            <div class="resource" id="resource2">
+                <h4>Call center 2</h4>
+                <img src="{% static 'Assets/phone-icon.png' %}" class="phone-icon">
+            </div>
+            <div class="resource" id="resource3">
+                <h4>Call center 3</h4>
+                <img src="{% static 'Assets/phone-icon.png' %}" class="phone-icon">
+            </div>
+            <div class="resource" id="resource4">
+                <h4>Call center 4</h4>
+                <img src="{% static 'Assets/phone-icon.png' %}" class="phone-icon">
+            </div>
+
+            <!-- avatars -->
+            <div id="avatar-self" style="left: 0; top: 0">
+                <img src="{% static 'Assets/grayppl.svg' %}" >
+            </div>
+
+            <div id="info">
+                <h1> Check here for information!</h1>
+                <h4> Sample intro:</h4>
+                    <p> stuff</p>
+                    <p>778 999 9999</p>
+            </div>
+
         </div>
 
     </div> <!--end of wrapper -->

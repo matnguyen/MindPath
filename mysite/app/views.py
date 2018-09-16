@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
+from .models import Resources
 
 
 # Create your views here.
@@ -51,7 +52,21 @@ def search(request):
 
 
 def websites(request):
-    return render(request, 'websites.html')
+    websites = Resources.objects.filter(resource_type="website")
+    websites_dict = {}
+    for index, website in enumerate(websites):
+        info = {}
+        info['name'] = website.name
+        info['address'] = website.address
+        info['city'] = website.city
+        info['state'] = website.state
+        info['country'] = website.country
+        info['phone_no'] = website.phone_no
+        info['health_type'] = website.health_type
+        info['resource_type'] = website.resource_type
+        info['link'] = website.link
+        websites_dict[index] = info
+    return render(request, 'websites.html', {'websites_dict': websites_dict})
 
 
 def clinics(request):
@@ -59,7 +74,21 @@ def clinics(request):
 
 
 def call_centres(request):
-    return render(request, 'call-centres.html')
+    centres = Resources.objects.filter(resource_type="call-center")
+    centres_dict = {}
+    for index,centre in enumerate(centres):
+        info = {}
+        info['name'] = centre.name
+        info['address'] = centre.address
+        info['city'] = centre.city
+        info['state'] = centre.state
+        info['country'] = centre.country
+        info['phone_no'] = centre.phone_no
+        info['health_type'] = centre.health_type
+        info['resource_type'] = centre.resource_type
+        info['link'] = centre.link
+        centres_dict[index] = info
+    return render(request, 'call-centres.html', {'centres_dict': centres_dict})
 
 
 def about(request):
