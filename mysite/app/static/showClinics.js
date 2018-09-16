@@ -6,12 +6,34 @@ const defaultLat = 49.2827;
 const defaultLon = -123.1207;
 const defaultZoom = 14;
 
-const locations = [
-    "Mood Disorders Association of BC",
-    "Canadian Mental Health Association, BC Division"
-];
+//const locations = [
+//    "Mood Disorders Association of BC",
+//    "Canadian Mental Health Association, BC Division"
+//];
 
-function myMap() {
+function myMap(json_in) {
+//    console.log("aylmao");
+//    var locations_json = JSON.parse(json_in);
+//    console.log("lmao");
+
+//    locations = {};
+//    fields = {};
+//
+//    for (var i = 0, location; i < locations_json.length; i++) {
+//        for (var j = 0; field; j < locations_json.i.length; j++) {
+//            field = locations_json.i[j];
+//            fields[] = field;
+//        }
+//        location = locations_json[i];
+//        locations[]
+//    }
+
+//    locations = [];
+//
+//    for (var i = 0; location; i < locations_json.length; i++) {
+//        locations.push(locations_json[i]['name'])
+//    }
+
     var mapProp = {
         zoom: defaultZoom,
         center:new google.maps.LatLng(defaultLat, defaultLon)
