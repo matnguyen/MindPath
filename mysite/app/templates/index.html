@@ -10,9 +10,10 @@
     <script src="{% static 'script.js' %}"></script>
 </head>
 
-<body>
+<body onload="gameLoop()" onkeydown="" onkeyup="">
     <div id ="wrapper">
-        <h1><img src="{% static 'Assets/Title.png' %}" alt="Mind Path" id="logo"></h1>
+        <h1><img src="{% static 'assets/Title.png' %}" alt="Mind Path" id="logo"></h1>
+
         <!-- google search bar -->
         <form method="POST" action="search" id="google-search">{% csrf_token %}
             <input type="text" name="handle" value="" />
@@ -37,7 +38,7 @@
         </div>
 
         <!-- avatars -->
-        <div id="avatar-self">
+        <div id="avatar-self" style="left: 100px; top: 100px;">
         </div>
         <div id="avatar-others">
         </div>
