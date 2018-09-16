@@ -11,7 +11,13 @@ const locations = [
     "Canadian Mental Health Association, BC Division"
 ];
 
+function jsonToObject(jsonString) {
+    return JSON.parse(jsonString);
+}
+
 function myMap() {
+    // console.log(jsonToObject("{1: 2, 2:4, 3:8}"));
+
     var mapProp = {
         zoom: defaultZoom,
         center:new google.maps.LatLng(defaultLat, defaultLon)
