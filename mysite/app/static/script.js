@@ -134,6 +134,14 @@ function updateOtherAvatars() {
 // code for if you click on a website icon, it will pop open a div
 // and describe the website
 
+$(".phone-icon").click(function(){
+    $("#info").show();
+});
+
+// TODO : if you click outside then hide #info
+$(".outside").click(function()) {
+    $("#info").hide();
+}
 
 $(function() {
     // Create avatars for each other person
