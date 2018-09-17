@@ -11,3 +11,7 @@ Visually representing other active users in real-time creates a feeling of being
 Enveloping the user in an active community helps alleviate some of the intimidation associated with seeking for help. 
 
 Implemented in python and django. Web application, with possible AI implementation.
+
+## Implementation:
+* Back end: Django (Python)
+* Front end: Javascript, HTML, CSS
