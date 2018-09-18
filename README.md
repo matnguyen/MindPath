@@ -15,3 +15,5 @@ Implemented in python and django. Web application, with possible AI implementati
 ## Implementation:
 * Back end: Django (Python)
 * Front end: Javascript, HTML, CSS
+
+Made in 24 hours during Lumohacks 2018
